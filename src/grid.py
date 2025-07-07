@@ -17,7 +17,6 @@ class Grid:
     def fill_rect(self, xmin, xmax, ymin, ymax, color):
         """
         Fill a rectangular area with `color`.
-        Top-left is (0, 0).
         Args:
             xmin, xmax: horizontal range (columns)
             ymin, ymax: vertical range (rows)
