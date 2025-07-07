@@ -31,3 +31,45 @@ def render_grid(grid, save_path="output.png"):
     plt.savefig(save_path, dpi=100, bbox_inches='tight', pad_inches=0.03)
 
     plt.close()
+
+
+def render_grids_together(grid1, grid2, save_path="combined.png"):
+    rows1, cols1 = grid1.rows, grid1.cols
+    rows2, cols2 = grid2.rows, grid2.cols
+
+    rgb_grid1 = np.array([
+        [mcolors.to_rgb(grid1.as_list()[r][c]) for c in range(cols1)]
+        for r in range(rows1)
+    ])
+    rgb_grid2 = np.array([
+        [mcolors.to_rgb(grid2.as_list()[r][c]) for c in range(cols2)]
+        for r in range(rows2)
+    ])
+
+    fig, axs = plt.subplots(1, 2, figsize=(cols1 + cols2, max(rows1, rows2)))
+    fig.patch.set_facecolor("gray")
+
+    # First grid
+    axs[0].imshow(rgb_grid1, interpolation='none', extent=(0, cols1, rows1, 0))
+    for x in range(cols1 + 1):
+        axs[0].axvline(x, color='gray', linewidth=2)
+    for y in range(rows1 + 1):
+        axs[0].axhline(y, color='gray', linewidth=2)
+    axs[0].set_xlim(0, cols1)
+    axs[0].set_ylim(0, rows1)
+    axs[0].set_aspect('equal')
+    axs[0].axis('off')
+
+    # Second grid
+    axs[1].imshow(rgb_grid2, interpolation='none', extent=(0, cols2, rows2, 0))
+    for x in range(cols2 + 1):
+        axs[1].axvline(x, color='gray', linewidth=2)
+    for y in range(rows2 + 1):
+        axs[1].axhline(y, color='gray', linewidth=2)
+    axs[1].set_xlim(0, cols2)
+    axs[1].set_ylim(0, rows2)
+    axs[1].set_aspect('equal')
+    axs[1].axis('off')
+
+    plt.savefig(save_path, dpi=100, bbox_inches='tight', pad_inches=0.03)
+    plt.close()
