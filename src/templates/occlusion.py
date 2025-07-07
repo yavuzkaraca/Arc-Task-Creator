@@ -1,8 +1,8 @@
 import random
-from grid import Grid
+from src.grid import Grid
 
 
-def generate_occlusion_reversal_samesize(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+def generate_occlusion_reversal_rectangles(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
     rows, cols = grid_size
     grid_input = Grid(rows, cols)
     grid_output = Grid(rows, cols)
@@ -31,13 +31,13 @@ def generate_occlusion_reversal_samesize(grid_size=(12, 12), size_range=(2, 5), 
         front_block = {"xmin": x2, "ymin": y2 - h, "xmax": x2 + w, "ymax": y2, "color": colors[1]}
 
     elif corner == "tr":
-        front_block = {"xmin": x2-w, "ymin": y2 - h, "xmax": x2, "ymax": y2, "color": colors[1]}
+        front_block = {"xmin": x2 - w, "ymin": y2 - h, "xmax": x2, "ymax": y2, "color": colors[1]}
 
     elif corner == "bl":
         front_block = {"xmin": x2, "ymin": y2, "xmax": x2 + w, "ymax": y2 + h, "color": colors[1]}
 
     else:
-        front_block = {"xmin": x2-w, "ymin": y2, "xmax": x2, "ymax": y2 + h, "color": colors[1]}
+        front_block = {"xmin": x2 - w, "ymin": y2, "xmax": x2, "ymax": y2 + h, "color": colors[1]}
 
     # Input: back first, front second
     grid_input.fill_rect(**back_block)
@@ -50,6 +50,9 @@ def generate_occlusion_reversal_samesize(grid_size=(12, 12), size_range=(2, 5), 
     return grid_input, grid_output
 
 
+"""
+# Might be needed if we want rectangles of different sizes. For now halted implementing logic.
+
 def generate_occlusion_reversal_difsize(grid_size=(12, 12), size_range=(3, 5), colors=("red", "blue")):
     rows, cols = grid_size
     grid_input = Grid(rows, cols)
@@ -57,6 +60,7 @@ def generate_occlusion_reversal_difsize(grid_size=(12, 12), size_range=(3, 5), c
 
     # Random sizes for both blocks
     w1, h1 = random.randint(*size_range), random.randint(*size_range)
+    w2, h2 = random.randint(*size_range), random.randint(*size_range)
 
     # Random position for back block (x and y of bottom left corner)
     x1 = random.randint(0, cols - w1)
@@ -109,3 +113,5 @@ def generate_occlusion_reversal_difsize(grid_size=(12, 12), size_range=(3, 5), c
     grid_output.fill_rect(**back_block)
 
     return grid_input, grid_output
+"""
+
