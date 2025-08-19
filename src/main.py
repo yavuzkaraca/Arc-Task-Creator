@@ -1,5 +1,5 @@
 from src.visualize import render_grid, render_grids_together
-from src.templates.occlusion import generate_occlusion_reversal_rectangles
+from src.tasks.occlusion import generate_occlusion_reversal_rectangles
 from src.util import get_output_path
 
 
