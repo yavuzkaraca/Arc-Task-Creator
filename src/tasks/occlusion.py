@@ -11,7 +11,8 @@ def generate_occlusion_reversal_rectangles(grid_size=(12, 12), size_range=(2, 5)
     # Random sizes for both blocks
     w, h = random.randint(*size_range), random.randint(*size_range)
 
-    # TODO: update the block location generation logic. Use always top-left corner, calculate valid window from there.
+    # TODO: update the block location generation logic. Use always top-left corner, calculate valid window from
+    #  there. Use rotation to generate other possibilities. This makes non-square and different-size blocks easier.
 
     # Random position for back block (x and y of bottom left corner of the back block)
     x1 = random.randint(min(size_range), cols - w - min(size_range))
@@ -51,5 +52,3 @@ def generate_occlusion_reversal_rectangles(grid_size=(12, 12), size_range=(2, 5)
     grid_output.fill_rect(**back_block)
 
     return grid_input, grid_output
-
-
