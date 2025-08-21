@@ -61,7 +61,7 @@ def render_save_grid(grid, save_path="output.png"):
     plt.close()
 
 
-def render_grids_together(grid1, grid2, save_path="combined.png"):
+def render_save_combined_grids(grid1, grid2, save_path="combined.png"):
     rows1, cols1 = grid1.rows, grid1.cols
     rows2, cols2 = grid2.rows, grid2.cols
 

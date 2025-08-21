@@ -1,22 +1,26 @@
 from src.tasks.attraction import generate_color_attraction
-from src.visualize import render_save_grid, render_grids_together
 from src.tasks.occlusion import generate_occlusion_reversal_rectangles
-from src.util import get_output_path
+from src.visualize import render_save_grid, render_save_combined_grids
+from src.util import next_run_dir
 
 
-def main():
-    input_grid, output_grid = generate_occlusion_reversal_rectangles()
-    render_save_grid(input_grid, save_path=get_output_path("occlusion", "input.png"))
-    render_save_grid(output_grid, save_path=get_output_path("occlusion", "output.png"))
-    render_grids_together(input_grid, output_grid,
-                          save_path=get_output_path("occlusion", "input_output_combined.png"))
-
-    input_grid, output_grid = generate_color_attraction()
-    render_save_grid(input_grid, save_path=get_output_path("attraction", "input.png"))
-    render_save_grid(output_grid, save_path=get_output_path("attraction", "output.png"))
-    render_grids_together(input_grid, output_grid,
-                          save_path=get_output_path("attraction", "input_output_combined.png"))
+def _save(run_dir, ig, og):
+    render_save_grid(ig, f"{run_dir}/input.png")
+    render_save_grid(og, f"{run_dir}/output.png")
+    render_save_combined_grids(ig, og, f"{run_dir}/input_output_combined.png")
 
 
-if __name__ == '__main__':
-    main()
+def main(N=1):
+    tasks = [
+        ("occlusion", generate_occlusion_reversal_rectangles),
+        ("attraction", generate_color_attraction),
+    ]
+    for name, gen in tasks:
+        for _ in range(N):
+            run = next_run_dir(name)  # t1, t2, ...
+            ig, og = gen()
+            _save(run, ig, og)
+
+
+if __name__ == "__main__":
+    main(N=3)
