@@ -50,7 +50,8 @@ def generate_size_attraction(grid_size=(12, 12), size_range=(3, 6), colors=("red
     return grid_input, grid_output
 
 
-def generate_repulsion(grid_size=(12, 12), size_range=(3, 6), colors=("red", "blue")):
+def generate_repulsion(grid_size=(12, 12), size_range=(3, 6), colors=("red", "blue")): # aka "Gun" :D
+
     rows, cols = grid_size
     grid_input, grid_output = Grid(rows, cols), Grid(rows, cols)
 
