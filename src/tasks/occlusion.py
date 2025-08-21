@@ -3,7 +3,7 @@ import random
 from src.grid import Grid
 
 
-def generate_occlusion_reversal_rectangles(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+def generate_occlusion_reversal(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
     rows, cols = grid_size
     grid_input = Grid(rows, cols)
     grid_output = Grid(rows, cols)
