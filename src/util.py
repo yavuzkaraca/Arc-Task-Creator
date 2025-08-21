@@ -1,4 +1,5 @@
 import os
+import random
 
 
 def next_run_dir(task_name: str) -> str:
@@ -8,3 +9,7 @@ def next_run_dir(task_name: str) -> str:
     run = os.path.join(base, f"t{idx}")
     os.makedirs(run, exist_ok=True)
     return run
+
+
+def rand_between(a, b):
+    return random.randint(a, b) if a < b else a

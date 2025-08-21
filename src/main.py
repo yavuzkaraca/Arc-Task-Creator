@@ -1,4 +1,4 @@
-from src.tasks.attraction import generate_color_attraction
+from src.tasks.attraction import generate_color_attraction, generate_size_attraction, generate_repulsion
 from src.tasks.occlusion import generate_occlusion_reversal_rectangles
 from src.visualize import render_save_grid, render_save_combined_grids
 from src.util import next_run_dir
@@ -12,12 +12,14 @@ def _save(run_dir, ig, og):
 
 def main(N=1):
     tasks = [
-        ("occlusion", generate_occlusion_reversal_rectangles),
-        ("attraction", generate_color_attraction),
+        # ("occlusion", generate_occlusion_reversal_rectangles),
+        # ("attraction_color", generate_color_attraction),
+        # ("attraction_size", generate_size_attraction),
+        ("repulsion", generate_repulsion)
     ]
     for name, gen in tasks:
         for _ in range(N):
-            run = next_run_dir(name)  # t1, t2, ...
+            run = next_run_dir(name)
             ig, og = gen()
             _save(run, ig, og)
 
