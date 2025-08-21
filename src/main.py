@@ -7,7 +7,7 @@ from src.util import next_run_dir
 def _save(run_dir, ig, og):
     render_save_grid(ig, f"{run_dir}/input.png")
     render_save_grid(og, f"{run_dir}/output.png")
-    render_save_combined_grids(ig, og, f"{run_dir}/input_output_combined.png")
+    render_save_combined_grids(ig, og, f"{run_dir}/combined.png")
 
 
 def main(N=1):
