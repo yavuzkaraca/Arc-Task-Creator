@@ -1,5 +1,6 @@
 from src.tasks.attraction import (generate_color_attraction, generate_size_attraction, generate_repulsion_gun,
                                   generate_repulsion_ambiguous)
+from src.tasks.expansion import generate_star_expansion_single_step, generate_star_expansion_full
 from src.tasks.occlusion import generate_occlusion_reversal
 from src.visualize import render_save_grid, render_save_combined_grids
 from src.util import next_run_dir
@@ -13,11 +14,13 @@ def _save(run_dir, ig, og):
 
 def main(N=1):
     tasks = [
-        ("occlusion_reversal", generate_occlusion_reversal),
-        ("attraction_color", generate_color_attraction),
-        ("attraction_size", generate_size_attraction),
-        ("repulsion_gun", generate_repulsion_gun),
-        ("repulsion_ambiguous", generate_repulsion_ambiguous)
+        #("occlusion_reversal", generate_occlusion_reversal),
+        #("attraction_color", generate_color_attraction),
+        #("attraction_size", generate_size_attraction),
+        #("repulsion_gun", generate_repulsion_gun),
+        #("repulsion_ambiguous", generate_repulsion_ambiguous),
+        #("expansion_star_step", generate_star_expansion_single_step),
+        ("expansion_star_full", generate_star_expansion_full)
     ]
     for name, gen in tasks:
         for _ in range(N):
