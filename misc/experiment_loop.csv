@@ -1,0 +1,17 @@
+task_id,task_type,example_1,example_2,probe,left_label,right_label,applies
+1,attraction_color,attraction_color.t1.combined.png,attraction_color.t2.combined.png,attraction_color.t4.combined.png,Rule applies,Rule does NOT apply,1
+2,attraction_color,attraction_color.t1.combined.png,attraction_color.t2.combined.png,attraction_gravity.t1.combined.png,Rule applies,Rule does NOT apply,0
+3,attraction_gravity,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,attraction_gravity.t4.combined.png,Rule applies,Rule does NOT apply,1
+4,attraction_gravity,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,attraction_size.t1.combined.png,Rule applies,Rule does NOT apply,0
+5,attraction_size,attraction_size.t1.combined.png,attraction_size.t2.combined.png,attraction_size.t4.combined.png,Rule applies,Rule does NOT apply,1
+6,attraction_size,attraction_size.t1.combined.png,attraction_size.t2.combined.png,expansion_star_full.t1.combined.png,Rule applies,Rule does NOT apply,0
+7,expansion_star_full,expansion_star_full.t1.combined.png,expansion_star_full.t2.combined.png,expansion_star_full.t4.combined.png,Rule applies,Rule does NOT apply,1
+8,expansion_star_full,expansion_star_full.t1.combined.png,expansion_star_full.t2.combined.png,expansion_star_step.t1.combined.png,Rule applies,Rule does NOT apply,0
+9,expansion_star_step,expansion_star_step.t1.combined.png,expansion_star_step.t2.combined.png,expansion_star_step.t4.combined.png,Rule applies,Rule does NOT apply,1
+10,expansion_star_step,expansion_star_step.t1.combined.png,expansion_star_step.t2.combined.png,occlusion_reversal.t1.combined.png,Rule applies,Rule does NOT apply,0
+11,occlusion_reversal,occlusion_reversal.t1.combined.png,occlusion_reversal.t2.combined.png,occlusion_reversal.t4.combined.png,Rule applies,Rule does NOT apply,1
+12,occlusion_reversal,occlusion_reversal.t1.combined.png,occlusion_reversal.t2.combined.png,repulsion_ambiguous.t1.combined.png,Rule applies,Rule does NOT apply,0
+13,repulsion_ambiguous,repulsion_ambiguous.t1.combined.png,repulsion_ambiguous.t2.combined.png,repulsion_ambiguous.t4.combined.png,Rule applies,Rule does NOT apply,1
+14,repulsion_ambiguous,repulsion_ambiguous.t1.combined.png,repulsion_ambiguous.t2.combined.png,repulsion_gun.t1.combined.png,Rule applies,Rule does NOT apply,0
+15,repulsion_gun,repulsion_gun.t1.combined.png,repulsion_gun.t2.combined.png,repulsion_gun.t4.combined.png,Rule applies,Rule does NOT apply,1
+16,repulsion_gun,repulsion_gun.t1.combined.png,repulsion_gun.t2.combined.png,attraction_color.t1.combined.png,Rule applies,Rule does NOT apply,0
