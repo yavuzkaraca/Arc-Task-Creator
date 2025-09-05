@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Questionnaire</title>
+  <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+  <form>
+    <header>
+      <h1>Please answer the following questions before proceeding to the task</h1>
+    </header>
+
+    <main>
+      <table>
+        <!-- Demographics -->
+        <tr>
+          <th><label for="age">How old are you?</label></th>
+          <td colspan="3"><input type="number" name="age" id="age" min="18" max="99" required /></td>
+        </tr>
+
+        <tr>
+          <th><label for="educational_level">Select your educational level</label></th>
+          <td colspan="3">
+            <select name="educational_level" id="educational_level" required>
+              <option value="">--</option>
+              <option value="primary">Primary school</option>
+              <option value="secondary">Secondary school</option>
+              <option value="vocational">Vocational qualification</option>
+              <option value="bachelor">Bachelor's degree</option>
+              <option value="master">Master's degree</option>
+              <option value="doctorate">Doctorate (PhD)</option>
+              <option value="other">Other</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="occupation">What is your current occupation?</label></th>
+          <td colspan="3">
+            <select name="occupation" id="occupation" required>
+              <option value="">--</option>
+              <option value="student">Student</option>
+              <option value="employed_full_time">Employed full-time</option>
+              <option value="employed_part_time">Employed part-time</option>
+              <option value="unemployed">Unemployed</option>
+              <option value="self-employed">Self-employed</option>
+              <option value="retired">Retired</option>
+              <option value="other_occupation">Other</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="gender">What is your gender?</label></th>
+          <td colspan="3">
+            <select name="gender" id="gender" required>
+              <option value="">--</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non_binary">Non-binary</option>
+              <option value="prefer_not_to_say">Prefer not to say</option>
+              <option value="other_gender">Other</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </main>
+
+    <footer>
+      <button type="submit">Submit</button>
+    </footer>
+  </form>
+</body>
+</html>
