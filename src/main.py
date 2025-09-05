@@ -6,30 +6,30 @@ from src.visualize import render_save_grid, render_save_combined_grids
 from src.util import next_run_dir, next_run_idx
 
 
-def _save(base, idx, input_grid, output_grid):
-    prefix = f"t{idx}"
+def _save(base, name, idx, input_grid, output_grid):
+    prefix = f"{name}.t{idx}"
     render_save_grid(input_grid, f"{base}/{prefix}.input.png")
     render_save_grid(output_grid, f"{base}/{prefix}.output.png")
     render_save_combined_grids(input_grid, output_grid, f"{base}/{prefix}.combined.png")
 
 
-def main(N=1):
+def main(N):
     tasks = [
-        #("occlusion_reversal", generate_occlusion_reversal),
+        ("occlusion_reversal", generate_occlusion_reversal),
         ("attraction_color", generate_color_attraction),
-        #("attraction_size", generate_size_attraction),
-        #("attraction_gravity", generate_gravity),
-        #("repulsion_gun", generate_repulsion_gun),
-        #("repulsion_ambiguous", generate_repulsion_ambiguous),
-        #("expansion_star_step", generate_star_expansion_single_step),
-        #("expansion_star_full", generate_star_expansion_full)
+        ("attraction_size", generate_size_attraction),
+        ("attraction_gravity", generate_gravity),
+        ("repulsion_gun", generate_repulsion_gun),
+        ("repulsion_ambiguous", generate_repulsion_ambiguous),
+        ("expansion_star_step", generate_star_expansion_single_step),
+        ("expansion_star_full", generate_star_expansion_full)
     ]
     for name, gen in tasks:
         for _ in range(N):
             idx, base = next_run_idx(name)
             input_grid, output_grid = gen()
-            _save(base, idx, input_grid, output_grid)
+            _save(base, name, idx, input_grid, output_grid)
 
 
 if __name__ == "__main__":
-    main(N=3)
+    main(N=5)

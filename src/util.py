@@ -1,6 +1,6 @@
 import os
 import random
-from typing import Tuple
+import re
 
 
 def next_run_dir(task_name: str) -> str:
@@ -15,14 +15,26 @@ def next_run_dir(task_name: str) -> str:
     return run
 
 
-def next_run_idx(task_name: str) -> tuple[int, str]:
+def next_run_idx(task_name: str):
+    """
+    Return (next_index, base_dir) for the given task_name.
+    Detects both legacy 'tN/' directories and new 'task.tN.*' files.
+    """
     base = os.path.join("../out", task_name)
     os.makedirs(base, exist_ok=True)
-    idx = 1 + max(
-        [int(f[1:].split(".")[0]) for f in os.listdir(base) if f.startswith("t") and f[1:2].isdigit()]
-        or [0]
-    )
-    return idx, base
+
+    max_idx = 0
+    for entry in os.listdir(base):
+        m_legacy = re.fullmatch(r"t(\d+)", entry)
+        if m_legacy:
+            max_idx = max(max_idx, int(m_legacy.group(1)))
+            continue
+
+        m_flat = re.match(rf"{re.escape(task_name)}\.t(\d+)\.", entry)
+        if m_flat:
+            max_idx = max(max_idx, int(m_flat.group(1)))
+
+    return max_idx + 1, base
 
 
 def rand_between(a, b):
