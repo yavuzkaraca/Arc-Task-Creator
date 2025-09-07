@@ -52,3 +52,28 @@ def generate_occlusion_reversal(grid_size=(12, 12), size_range=(2, 5), colors=("
     grid_output.fill_rect(**back_block)
 
     return grid_input, grid_output
+
+
+def generate_occlusion_transform(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+    # get a base input from your existing generator
+    grid_input, _ = generate_occlusion_reversal(
+        grid_size=grid_size, size_range=size_range, colors=colors
+    )
+
+    # output = transformed copy of input
+    grid_output = grid_input.copy()
+
+    # choose one transform uniformly at random
+    transform = random.choice(("mirror_x", "mirror_y", "rot90", "rot180"))
+
+    if transform == "mirror_x":
+        grid_output.mirror_x()
+    elif transform == "mirror_y":
+        grid_output.mirror_y()
+    elif transform == "rot90":
+        grid_output.rotate_left_90()
+    else:  # "rot180"
+        grid_output.rotate_left_90()
+        grid_output.rotate_left_90()
+
+    return grid_input, grid_output
