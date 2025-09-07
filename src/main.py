@@ -1,5 +1,5 @@
 from src.tasks.attraction import (generate_color_attraction, generate_size_attraction, generate_repulsion_gun,
-                                  generate_repulsion_ambiguous, generate_gravity)
+                                  generate_repulsion_ambiguous, generate_gravity, generate_float)
 from src.tasks.expansion import generate_star_expansion_single_step, generate_star_expansion_full
 from src.tasks.occlusion import generate_occlusion_reversal
 from src.visualize import render_save_grid, render_save_combined_grids
@@ -19,6 +19,7 @@ def main(N):
         ("attraction_color", generate_color_attraction),
         ("attraction_size", generate_size_attraction),
         ("attraction_gravity", generate_gravity),
+        ("attraction_float", generate_float),
         ("repulsion_gun", generate_repulsion_gun),
         ("repulsion_ambiguous", generate_repulsion_ambiguous),
         ("expansion_star_step", generate_star_expansion_single_step),
@@ -32,4 +33,4 @@ def main(N):
 
 
 if __name__ == "__main__":
-    main(N=5)
+    main(N=15)
