@@ -38,3 +38,30 @@ class Grid:
         new_grid = Grid(self.rows, self.cols)
         new_grid.grid = [row.copy() for row in self.grid]
         return new_grid
+
+    # ------------ MUTATING TRANSFORMS ------------
+
+    def rotate_left_90(self):
+        """Rotate 90° counterclockwise (rows↔cols). Mutates self."""
+        out = [[None] * self.rows for _ in range(self.cols)]
+        for r in range(self.rows):
+            for c in range(self.cols):
+                out[self.cols - 1 - c][r] = self.grid[r][c]
+        self.grid = out
+        self.rows, self.cols = self.cols, self.rows  # swap
+
+    def mirror_x(self):
+        """Mirror along the x-axis (horizontal axis): top ↔ bottom. Mutates self."""
+        out = [[None] * self.cols for _ in range(self.rows)]
+        for r in range(self.rows):
+            for c in range(self.cols):
+                out[self.rows - 1 - r][c] = self.grid[r][c]
+        self.grid = out
+
+    def mirror_y(self):
+        """Mirror along the y-axis (vertical axis): left ↔ right. Mutates self."""
+        out = [[None] * self.cols for _ in range(self.rows)]
+        for r in range(self.rows):
+            for c in range(self.cols):
+                out[r][self.cols - 1 - c] = self.grid[r][c]
+        self.grid = out
