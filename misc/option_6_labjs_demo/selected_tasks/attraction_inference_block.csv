@@ -1,0 +1,5 @@
+task_id,example_1,example_2,applies
+1,attraction_color.t3.combined.png,attraction_color.t8.combined.png,y
+2,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,n
+3,attraction_gravity.t10.combined.png,attraction_gravity.t12.combined.png,y
+4,attraction_color.t10.combined.png,attraction_color.t2.combined.png,n

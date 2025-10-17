@@ -1,0 +1,87 @@
+Example 1:
+
+<div style="
+  background-color: #ffeaea;
+  display:inline-block;                /* shrink to content */
+  padding:12px; border-radius:8px;
+">
+  <div style="display:flex; justify-content:space-between; font-weight:600; margin-bottom:8px;">
+    <span>Input</span><span>Output</span>
+  </div>
+
+  <img
+    src="${ this.files[this.parameters.example_1] }"
+    alt="Example stimulus"
+    style="display:block; max-width:100%; height:auto;"
+  >
+</div>
+
+
+Example 2:
+
+<!-- This wrapper paints the whole panel interior (middle layer) -->
+<div style="
+  background:#e6ffea;                 /* change to #e6ffea for green */
+  margin: calc(var(--pad) * -1);      /* cancel panel padding */
+  padding: var(--pad);                /* keep consistent spacing */
+  border-radius: inherit;             /* match rounded corners */
+  overflow: hidden;                   /* clip edges */
+">
+
+  <!-- Inner white box -->
+  <div style="
+    background:#ffffff;
+    border-radius: 10px;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 16px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  ">
+
+    <div style="display:flex; justify-content:space-between; font-weight:600; margin-bottom:12px;">
+      <span>Input</span><span>Output</span>
+    </div>
+
+    <img
+      src="${ this.files[this.parameters.example_1] }"
+      style="display:block; width:100%; height:auto; margin-bottom:24px;"
+    >
+
+    <img
+      src="${ this.files[this.parameters.example_2] }"
+      style="display:block; width:100%; height:auto;"
+    >
+  </div>
+</div>
+
+
+
+
+Example 3:
+
+<div style="
+  background-color: #e6ffea ;
+  display:inline-block;                /* shrink to content */
+  padding:12px; border-radius:8px;
+">
+  <div class="panel task">
+  <h2 class="text-center">Does the rule correctly apply?</h2>
+  <div class="img-grid" id="probe-grid" aria-live="polite"></div>
+
+  <p class="key-hint text-center">
+    <kbd>y</kbd> = ${ parameters.left_label || 'Rule applies' } ·
+    <kbd>n</kbd> = ${ parameters.right_label || 'Rule does NOT apply' }
+  </p>
+</div>
+
+  <div style="display:flex; justify-content:space-between; font-weight:600; margin-bottom:8px;">
+    <span>Input</span><span>Output</span>
+  </div>
+
+  <img
+    src="${ this.files[this.parameters.example_1] }"
+    alt="Example stimulus"
+    style="display:block; max-width:100%; height:auto;"
+  >
+</div>
+
