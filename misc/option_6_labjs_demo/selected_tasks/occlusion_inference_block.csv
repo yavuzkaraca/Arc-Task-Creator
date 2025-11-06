@@ -1,6 +1,6 @@
 task_id,example_1,example_2,applies
-11,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y
-12,occlusion_reversal.t5.combined.png,occlusion_reversal.t6.combined.png,y
-13,occlusion_transform.t7.combined.png,occlusion_transform.t8.combined.png,n
-14,occlusion_transform.t2.combined.png,occlusion_transform.t13.combined.png,n
-15,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n
+20,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y
+21,occlusion_reversal.t5.combined.png,occlusion_reversal.t6.combined.png,y
+22,occlusion_transform.t7.combined.png,occlusion_transform.t8.combined.png,n
+23,occlusion_transform.t2.combined.png,occlusion_transform.t13.combined.png,n
+24,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n
