@@ -9,12 +9,12 @@ These tasks are used as a dataset for research on **rule inference and rule appl
 
 The project generates pairs of grids (an **input** and its corresponding **output**) based on specific transformation rules such as:
 
-- **Arithmetic** (e.g. inversion, parity, majority/minority recolor)
-- **Attraction/repulsion** (e.g. gravity, fall, float, repulsion)
-- **Expansion** (e.g. star, plus, diagonal growth)
+- **Expansion** (e.g. star, plus, diagonal, single-step / infinite growth)
+- **Attraction/repulsion** (e.g. pull, push, fall, float)
 - **Occlusion** (e.g. reversal, rotation, mirror)
+- **Arithmetic** (e.g. inversion, counting, majority/minority, parity)
 
-Each rule is implemented as a distinct generator, producing both input/output grids.
+Each rule is implemented as a separate function, and families of rules are organized within .py modules.
 
 ---
 
