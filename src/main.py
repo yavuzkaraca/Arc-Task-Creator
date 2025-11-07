@@ -21,29 +21,24 @@ def _save(base, name, idx, input_grid, output_grid):
 
 def main(N):
     tasks = [
-
-    ("arithmetic_inversion_recolor", generate_inversion_recolor)
-
+        ("occlusion_reversal", generate_occlusion_reversal),
+        ("occlusion_transform", generate_occlusion_transform),
+        ("attraction_color", generate_color_attraction),
+        ("attraction_size", generate_size_attraction),
+        ("attraction_gravity", generate_gravity),
+        ("attraction_float", generate_float),
+        ("attraction_repulsion_gun", generate_repulsion_gun),
+        ("attraction_repulsion_ambiguous", generate_repulsion_ambiguous),
+        ("expansion_star_step", generate_star_expansion_single_step),
+        ("expansion_star_full", generate_star_expansion_full),
+        ("expansion_plus_step", generate_plus_expansion_single_step),
+        ("expansion_plus_full", generate_plus_expansion_full),
+        ("expansion_3diagonal_full", generate_3diagonal_expansion_full),
+        ("arithmetic_majority_recolor", generate_majority_recolor),
+        ("arithmetic_minority_recolor", generate_minority_recolor),
+        ("arithmetic_parity_recolor", generate_parity_recolor),
+        ("arithmetic_inversion_recolor", generate_inversion_recolor)
     ]
-
-    """
-    ("occlusion_reversal", generate_occlusion_reversal),
-    ("occlusion_transform", generate_occlusion_transform),
-    ("attraction_color", generate_color_attraction),
-    ("attraction_size", generate_size_attraction),
-    ("attraction_gravity", generate_gravity),
-    ("attraction_float", generate_float),
-    ("attraction_repulsion_gun", generate_repulsion_gun),
-    ("attraction_repulsion_ambiguous", generate_repulsion_ambiguous),
-    ("expansion_star_step", generate_star_expansion_single_step),
-    ("expansion_star_full", generate_star_expansion_full),
-    ("expansion_plus_step", generate_plus_expansion_single_step),
-    ("expansion_plus_full", generate_plus_expansion_full),
-    ("expansion_3diagonal_full", generate_diagonal_expansion_full),
-    ("arithmetic_majority_recolor", generate_majority_recolor),
-    ("arithmetic_minority_recolor", generate_minority_recolor),
-    ("arithmetic_parity_recolor", generate_parity_recolor)
-    """
 
     for name, gen in tasks:
         for _ in range(N):
