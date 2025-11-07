@@ -42,14 +42,11 @@ def generate_star_expansion_full(grid_size=(12, 12), star_num=(1, 3), colors=("r
         n
     )
 
-    # mark centers on input
     for x, y in centers:
         grid_input.fill_cell(x, y, colors[0])
 
-    # directions: four diagonals
     dirs = ((1, 1), (1, -1), (-1, 1), (-1, -1))
 
-    # draw to borders on output
     for x0, y0 in centers:
         for dx, dy in dirs:
             x, y = x0 + dx, y0 + dy
@@ -77,14 +74,13 @@ def generate_plus_expansion_single_step(grid_size=(12, 12), plus_num=(1, 4), col
     for x, y in centers:
         grid_input.fill_cell(x, y, colors[0])
 
-        # four directions: up, down, left, right
         grid_output.fill_cell(x + 1, y, colors[1])
         grid_output.fill_cell(x - 1, y, colors[1])
         grid_output.fill_cell(x, y + 1, colors[1])
         grid_output.fill_cell(x, y - 1, colors[1])
 
     for x, y in centers:
-        grid_output.fill_cell(x, y, colors[0])
+        grid_output.fill_cell(x, y, colors[0])  # refill the origin points that might have been over-colored
 
     return grid_input, grid_output
 
@@ -102,11 +98,9 @@ def generate_plus_expansion_full(grid_size=(12, 12), plus_num=(1, 3), colors=("r
         n
     )
 
-    # mark centers on input
     for x, y in centers:
         grid_input.fill_cell(x, y, colors[0])
 
-    # directions: up, down, left, right
     dirs = ((1, 0), (-1, 0), (0, 1), (0, -1))
 
     for x0, y0 in centers:
@@ -118,7 +112,7 @@ def generate_plus_expansion_full(grid_size=(12, 12), plus_num=(1, 3), colors=("r
                 y += dy
 
     for x0, y0 in centers:
-        grid_output.fill_cell(x0, y0, colors[0])
+        grid_output.fill_cell(x0, y0, colors[0])  # refill the origin points that might have been over-colored
 
     return grid_input, grid_output
 
@@ -157,6 +151,6 @@ def generate_3diagonal_expansion_full(grid_size=(12, 12), star_num=(1, 3), color
                 y += dy
 
     for x0, y0 in centers:
-        grid_output.fill_cell(x0, y0, colors[0])
+        grid_output.fill_cell(x0, y0, colors[0])  # refill the origin points that might have been over-colored
 
     return grid_input, grid_output
