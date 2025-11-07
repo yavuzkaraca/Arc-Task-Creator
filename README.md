@@ -1,7 +1,7 @@
 # ArcTaskCreator
 
-**ArcTaskCreator** is a Python-based framework for generating **ARC-like visual puzzles**. 
-These puzzles are used as a dataset for research on **rule inference and rule application** processes in humans.
+Python-based framework for generating **ARC-like visual tasks**. 
+These tasks are used as a dataset for research on **rule inference and rule application** processes in humans.
 
 ---
 
