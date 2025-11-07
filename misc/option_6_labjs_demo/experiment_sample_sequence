@@ -6,6 +6,12 @@ p1,attraction_gravity.t22.combined.png,attraction_gravity.t24.combined.png,n
 p2,attraction_gravity.t25.combined.png,attraction_gravity.t27.combined.png,y
 p3,attraction_gravity.t29.combined.png,attraction_gravity.t28.combined.png,n
 
+task_id,example_1,example_2,applies
+p1,attraction_color.t35.combined.png,attraction_color.t28.combined.png,y
+p2,attraction_gravity.t30.combined.png,attraction_gravity.t31.combined.png,n
+p3,attraction_color.t27.combined.png,attraction_color.t30.combined.png,y
+
+attraction_color.t35.combined.png
 
 Example/Reminder: expansion_star_full.t2.combined.png,expansion_star_full.t1.combined.png
 
