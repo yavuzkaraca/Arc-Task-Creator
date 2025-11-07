@@ -9,12 +9,12 @@ These puzzles are used as a dataset for research on **rule inference and rule ap
 
 The project generates pairs of grids (an **input** and its corresponding **output**) based on specific transformation rules such as:
 
-- **Arithmetic transformations** (e.g. inversion, parity, majority/minority recolor)
-- **Attraction/repulsion rules** (e.g. gravity, fall, float, repulsion)
-- **Expansion rules** (e.g. star, plus, diagonal growth)
-- **Occlusion transformations** (e.g. reversal, rotation, mirror)
+- **Arithmetic** (e.g. inversion, parity, majority/minority recolor)
+- **Attraction/repulsion** (e.g. gravity, fall, float, repulsion)
+- **Expansion** (e.g. star, plus, diagonal growth)
+- **Occlusion** (e.g. reversal, rotation, mirror)
 
-Each rule type is implemented as a distinct generator, producing both input/output matrices and visualized examples.
+Each rule is implemented as a distinct generator, producing both input/output grids.
 
 ---
 
@@ -24,18 +24,16 @@ Each rule type is implemented as a distinct generator, producing both input/outp
 ArcTaskCreator/
 ├── misc/                      # Lab.js demo configurations
 ├── out/                       # Generated examples organized by rule type
-├── src/
-│   ├── tasks/
-│   │   ├── arithmetic.py
-│   │   ├── attraction.py
-│   │   ├── expansion.py
-│   │   └── occlusion.py
-│   ├── grid.py                # Grid logic and data structure
-│   ├── util.py                # Helper functions
-│   ├── visualize.py           # Visualization and figure generation
-│   └── main.py                # Main entry point for task generation
-├── LICENSE
-└── .gitignore
+└── src/
+    ├── tasks/
+    │   ├── arithmetic.py
+    │   ├── attraction.py
+    │   ├── expansion.py
+    │   └── occlusion.py
+    ├── grid.py                # Grid logic and data structure
+    ├── util.py                # Helper functions
+    ├── visualize.py           # Visualization and figure generation
+    └── main.py                # Main entry point for task generation
 ```
 
 ## Author
