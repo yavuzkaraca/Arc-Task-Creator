@@ -1,0 +1,6 @@
+task_id,example_1,example_2,applies
+5,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,y
+6,expansion_diagonal_full.t1.combined,expansion_diagonal_full.t3.combined,n
+7,expansion_plus_step.t1.combined.png,expansion_plus_step.t2.combined.png,n
+8,expansion_star_full.t3.combined.png,expansion_star_full.t4.combined.png,y
+9,expansion_diagonal_full.t2.combined.png,expansion_diagonal_full.t4.combined.png,n

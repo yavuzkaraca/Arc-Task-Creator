@@ -1,5 +1,4 @@
 
-
 p0(Example),attraction_gravity.t23.combined.png,attraction_gravity.t26.combined.png
 
 task_id,example_1,example_2,applies
@@ -8,20 +7,21 @@ p2,attraction_gravity.t25.combined.png,attraction_gravity.t27.combined.png,y
 p3,attraction_gravity.t29.combined.png,attraction_gravity.t28.combined.png,n
 
 
+Example/Reminder: expansion_star_full.t2.combined.png,expansion_star_full.t1.combined.png
 
 task_id,example_1,example_2,applies
 0,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,n
-1,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,y
-2,attraction_gravity.t10.combined.png,attraction_gravity.t12.combined.png,y
-3,attraction_color.t10.combined.png,attraction_color.t2.combined.png,n
-4,attraction_color.t10.combined.png,attraction_color.t2.combined.png,y
+1,expansion_star_step.t2.combined.png,expansion_star_step.t3.combined.png,y
+2,expansion_plus_full.t1.combined.png,expansion_plus_full.t2.combined.png,n
+3,expansion_plus_full.t3.combined.png,expansion_plus_full.t4.combined.png,y
+4,expansion_plus_full.t5.combined.png,expansion_plus_full.t6.combined.png,y
 
 task_id,example_1,example_2,applies
-5,attraction_color.t4.combined.png,attraction_color.t9.combined.png,y
-6,attraction_color.t6.combined.png,attraction_color.t20.combined.png,y
-7,attraction_gravity.t10.combined.png,attraction_gravity.t15.combined.png,n
-8,attraction_size.t6.combined.png,attraction_size.t4.combined.png,n
-9,attraction_color.t13.combined.png,attraction_color.t10.combined.png,y
+5,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,y
+6,expansion_diagonal_full.t1.combined,expansion_diagonal_full.t3.combined,n
+7,expansion_plus_step.t1.combined.png,expansion_plus_step.t2.combined.png,n
+8,expansion_star_full.t3.combined.png,expansion_star_full.t4.combined.png,y
+9,expansion_diagonal_full.t2.combined.png,expansion_diagonal_full.t4.combined.png,n
 
 
 Example/Reminder: attraction_color.t3.combined.png,attraction_color.t8.combined.png
@@ -40,20 +40,8 @@ task_id,example_1,example_2,applies
 18,attraction_size.t6.combined.png,attraction_size.t4.combined.png,n
 19,attraction_color.t13.combined.png,attraction_color.t10.combined.png,y
 
-task_id,example_1,example_2,applies
-20,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y
-21,occlusion_reversal.t5.combined.png,occlusion_reversal.t6.combined.png,y
-22,occlusion_transform.t7.combined.png,occlusion_transform.t8.combined.png,n
-23,occlusion_transform.t2.combined.png,occlusion_transform.t13.combined.png,n
-24,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n
 
-task_id,example_1,example_2,applies
-25,occlusion_reversal.t9.combined.png,occlusion_reversal.t10.combined.png,y
-26,occlusion_transform.t1.combined.png,occlusion_transform.t3.combined.png,n
-27,occlusion_reversal.t11.combined.png,occlusion_reversal.t12.combined.png,y
-28,occlusion_transform.t15.combined.png,occlusion_transform.t5.combined.png,n
-29,occlusion_reversal.t13.combined.png,occlusion_reversal.t14.combined.png,y
-
+Example/Reminder: occlusion_reversal.t1.combined.png,occlusion_reversal.t2.combined.png
 
 task_id,example_1,example_2,applies
 20,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y
@@ -61,8 +49,6 @@ task_id,example_1,example_2,applies
 22,occlusion_transform.t7.combined.png,occlusion_transform.t8.combined.png,n
 23,occlusion_transform.t2.combined.png,occlusion_transform.t13.combined.png,n
 24,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n
-
-
 
 task_id,example_1,example_2,applies
 25,occlusion_reversal.t9.combined.png,occlusion_reversal.t10.combined.png,y

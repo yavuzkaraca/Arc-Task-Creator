@@ -1,6 +1,0 @@
-task_id,example_1,example_2,applies
-0,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,n
-1,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,y
-2,attraction_gravity.t10.combined.png,attraction_gravity.t12.combined.png,y
-3,attraction_color.t10.combined.png,attraction_color.t2.combined.png,n
-4,attraction_color.t10.combined.png,attraction_color.t2.combined.png,y
