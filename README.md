@@ -36,9 +36,12 @@ ArcTaskCreator/
     └── main.py                # Main entry point for task generation
 ```
 
-## Author
+## ✨ Author & Acknowledgments
 
-**Yavuz Karaca**  
-University of Tübingen
+**Yavuz Karaca** — University of Tübingen  
+
+Special thanks to **Prof. Dr. Martin V. Butz**, **Dr. Michael Bannert**, and **Prof. Dr. Andreas Bartels**  
+for their valuable feedback and discussions on the design and use of these puzzles.
+
 
 
