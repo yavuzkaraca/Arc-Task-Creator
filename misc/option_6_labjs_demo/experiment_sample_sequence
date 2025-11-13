@@ -1,82 +1,82 @@
 
-p0(Example),attraction_gravity.t23.combined.png,attraction_gravity.t26.combined.png
+p0(Example),attraction_color.t23.combined.png,attraction_color.t26.combined.png
 
-task_id,example_1,example_2,applies
-p1,attraction_gravity.t22.combined.png,attraction_gravity.t24.combined.png,n
-p2,attraction_gravity.t25.combined.png,attraction_gravity.t27.combined.png,y
-p3,attraction_gravity.t29.combined.png,attraction_gravity.t28.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+p1,attraction_gravity.t22.combined.png,attraction_gravity.t24.combined.png,n,attraction,gravity,1
+p2,attraction_gravity.t25.combined.png,attraction_gravity.t27.combined.png,y,attraction,gravity,1
+p3,attraction_size.t29.combined.png,attraction_size.t28.combined.png,n,attraction,size,3
 
-task_id,example_1,example_2,applies
-p1,attraction_color.t35.combined.png,attraction_color.t28.combined.png,y
-p2,attraction_gravity.t30.combined.png,attraction_gravity.t31.combined.png,n
-p3,attraction_color.t27.combined.png,attraction_color.t30.combined.png,y
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+p1,attraction_color.t35.combined.png,attraction_color.t28.combined.png,y,attraction,color,2
+p2,attraction_gravity.t30.combined.png,attraction_gravity.t31.combined.png,n,attraction,gravity,1
+p3,attraction_color.t27.combined.png,attraction_color.t30.combined.png,y,attraction,color,2
 
 attraction_color.t35.combined.png
 
 Example/Reminder: expansion_star_full.t2.combined.png,expansion_star_full.t1.combined.png
 
-task_id,example_1,example_2,applies
-0,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,n
-1,expansion_star_step.t2.combined.png,expansion_star_step.t3.combined.png,y
-2,expansion_plus_full.t1.combined.png,expansion_plus_full.t2.combined.png,n
-3,expansion_plus_full.t3.combined.png,expansion_plus_full.t4.combined.png,y
-4,expansion_plus_full.t5.combined.png,expansion_plus_full.t6.combined.png,y
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+0,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,n,expansion,star_step,1
+1,expansion_star_step.t2.combined.png,expansion_star_step.t3.combined.png,y,expansion,star_step,1
+2,expansion_plus_full.t1.combined.png,expansion_plus_full.t2.combined.png,n,expansion,plus_full,1
+3,expansion_plus_full.t3.combined.png,expansion_plus_full.t4.combined.png,y,expansion,plus_full,1
+4,expansion_plus_full.t5.combined.png,expansion_plus_full.t6.combined.png,y,expansion,plus_full,1
 
-task_id,example_1,example_2,applies
-5,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,y
-6,expansion_diagonal_full.t1.combined.png,expansion_diagonal_full.t3.combined.png,n
-7,expansion_plus_step.t1.combined.png,expansion_plus_step.t2.combined.png,n.
-8,expansion_star_full.t3.combined.png,expansion_star_full.t4.combined.png,y
-9,expansion_diagonal_full.t2.combined.png,expansion_diagonal_full.t4.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+5,expansion_star_step.t1.combined.png,expansion_star_step.t4.combined.png,y,expansion,star_step,1
+6,expansion_diagonal_full.t1.combined.png,expansion_diagonal_full.t3.combined.png,n,expansion,diagonal_full,3
+7,expansion_plus_step.t1.combined.png,expansion_plus_step.t2.combined.png,n,expansion,plus_step,1
+8,expansion_star_full.t3.combined.png,expansion_star_full.t4.combined.png,y,expansion,star_full,1
+9,expansion_diagonal_full.t2.combined.png,expansion_diagonal_full.t4.combined.png,n,expansion,diagonal_full,3
 
 
 Example/Reminder: attraction_color.t3.combined.png,attraction_color.t8.combined.png
 
-task_id,example_1,example_2,applies
-10,attraction_color.t3.combined.png,attraction_color.t8.combined.png,y
-11,attraction_size.t5.combined.png,attraction_size.t7.combined.png,n
-12,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,n
-13,attraction_gravity.t10.combined.png,attraction_gravity.t12.combined.png,y
-14,attraction_color.t10.combined.png,attraction_color.t2.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+10,attraction_color.t3.combined.png,attraction_color.t8.combined.png,y,attraction,color,2
+11,attraction_size.t5.combined.png,attraction_size.t7.combined.png,n,attraction,size,3
+12,attraction_gravity.t1.combined.png,attraction_gravity.t2.combined.png,n,attraction,gravity,1
+13,attraction_gravity.t10.combined.png,attraction_gravity.t12.combined.png,y,attraction,gravity,1
+14,attraction_color.t10.combined.png,attraction_color.t2.combined.png,n,attraction,color,2
 
-task_id,example_1,example_2,applies
-15,attraction_color.t4.combined.png,attraction_color.t9.combined.png,y
-16,attraction_color.t6.combined.png,attraction_color.t20.combined.png,y
-17,attraction_gravity.t10.combined.png,attraction_gravity.t15.combined.png,n
-18,attraction_size.t6.combined.png,attraction_size.t4.combined.png,n
-19,attraction_color.t13.combined.png,attraction_color.t10.combined.png,y
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+15,attraction_color.t4.combined.png,attraction_color.t9.combined.png,y,attraction,color,2
+16,attraction_color.t6.combined.png,attraction_color.t20.combined.png,y,attraction,color,2
+17,attraction_gravity.t10.combined.png,attraction_gravity.t15.combined.png,n,attraction,gravity,1
+18,attraction_size.t6.combined.png,attraction_size.t4.combined.png,n,attraction,size,3
+19,attraction_color.t13.combined.png,attraction_color.t10.combined.png,y,attraction,color,2
 
 
 Example/Reminder: occlusion_reversal.t1.combined.png,occlusion_reversal.t2.combined.png
 
-task_id,example_1,example_2,applies
-20,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y
-21,occlusion_reversal.t5.combined.png,occlusion_reversal.t6.combined.png,y
-22,occlusion_transform.t7.combined.png,occlusion_transform.t8.combined.png,n
-23,occlusion_transform.t2.combined.png,occlusion_transform.t13.combined.png,n
-24,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+20,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y,occlusion,reversal,2
+21,occlusion_reversal.t5.combined.png,occlusion_reversal.t6.combined.png,y,occlusion,reversal,2
+22,occlusion_mirror_x.t1.combined.png,occlusion_mirror_x.t2.combined.png,n,occlusion,mirror_x,2
+23,occlusion_rotate_90.t1.combined.png,occlusion_rotate_90.t2.combined.png,n,occlusion,reversal,3
+24,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n,occlusion,reversal,2
 
-task_id,example_1,example_2,applies
-25,occlusion_reversal.t9.combined.png,occlusion_reversal.t10.combined.png,y
-26,occlusion_transform.t1.combined.png,occlusion_transform.t3.combined.png,n
-27,occlusion_reversal.t11.combined.png,occlusion_reversal.t12.combined.png,y
-28,occlusion_transform.t15.combined.png,occlusion_transform.t5.combined.png,n
-29,occlusion_reversal.t13.combined.png,occlusion_reversal.t14.combined.png,y
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+25,occlusion_reversal.t9.combined.png,occlusion_reversal.t10.combined.png,y,occlusion,reversal,2
+26,occlusion_mirror_y.t1.combined.png,occlusion_mirror_y.t1.combined.png,n,occlusion,mirror_y,1
+27,occlusion_reversal.t11.combined.png,occlusion_reversal.t12.combined.png,y,occlusion,reversal,2
+28,occlusion_rotate_180.t13.combined.png,occlusion_rotate_180.t4.combined.png,n,occlusion,rotate_180,3
+29,occlusion_reversal.t13.combined.png,occlusion_reversal.t14.combined.png,y,occlusion,reversal,2
 
 
-Example/Reminder: arithmetic_majority_recolor.t2.combined.png,arithmetic_majority_recolor.t3.combined.png
+Example/Reminder: arithmetic_majority_recolor.t2.combined.png,arithmetic_majority_recolor.t8.combined.png
 
-task_id,example_1,example_2,applies
-30,arithmetic_majority_recolor.t5.combined.png,arithmetic_majority_recolor.t8.combined.png,y
-31,arithmetic_parity_recolor.t3.combined.png,arithmetic_parity_recolor.t8.combined.png,n
-32,arithmetic_parity_recolor.t2.combined.png,arithmetic_parity_recolor.t4.combined.png,y
-33,arithmetic_parity_recolor.t5.combined.png,arithmetic_parity_recolor.t9.combined.png,y
-34,arithmetic_inversion_recolor.t7.combined.png,arithmetic_inversion_recolor.t8.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+30,arithmetic_majority_recolor.t29.combined.png,arithmetic_majority_recolor.t25.combined.png,y,arithmetic,majority,1
+31,arithmetic_majority_recolor.t5.combined.png,arithmetic_majority_recolor.t3.combined.png,y,arithmetic,majority,2
+32,arithmetic_inversion_recolor.t3.combined.png,arithmetic_inversion_recolor.t4.combined.png,n,arithmetic,inversion,1
+33,arithmetic_inversion_recolor.t5.combined.png,arithmetic_inversion_recolor.t6.combined.png,y,arithmetic,inversion,1
+34,arithmetic_minority_recolor.t4.combined.png,arithmetic_minority_recolor.t9.combined.png,n,arithmetic,minority,3
 
-task_id,example_1,example_2,applies
-35,arithmetic_minority_recolor.t1.combined.png,arithmetic_minority_recolor.t2.combined.png,n
-36,arithmetic_majority_recolor.t11.combined.png,arithmetic_majority_recolor.t12.combined.png,y
-37,arithmetic_majority_recolor.t1.combined.png,arithmetic_majority_recolor.t4.combined.png,y
-38,arithmetic_majority_recolor.t6.combined.png,arithmetic_majority_recolor.t9.combined.png,y
-39,arithmetic_inversion_recolor.t1.combined.png,arithmetic_inversion_recolor.t2.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+35,arithmetic_minority_recolor.t10.combined.png,arithmetic_minority_recolor.t2.combined.png,n,arithmetic,minority,2
+36,arithmetic_majority_recolor.t16.combined.png,arithmetic_majority_recolor.t12.combined.png,y,arithmetic,majority,1
+37,arithmetic_majority_recolor.t1.combined.png,arithmetic_majority_recolor.t4.combined.png,y,arithmetic,majority,3
+38,arithmetic_majority_recolor.t6.combined.png,arithmetic_majority_recolor.t9.combined.png,y,arithmetic,majority,1
+39,arithmetic_inversion_recolor.t1.combined.png,arithmetic_inversion_recolor.t2.combined.png,n,arithmetic,inversion,1
 
