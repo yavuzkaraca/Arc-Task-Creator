@@ -1,4 +1,3 @@
-
 import random
 from src.grid import Grid
 
@@ -54,7 +53,7 @@ def generate_occlusion_reversal(grid_size=(12, 12), size_range=(2, 5), colors=("
     return grid_input, grid_output
 
 
-def generate_occlusion_transform(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+def generate_occlusion_transform_random(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
     # get a base input from your existing generator
     grid_input, _ = generate_occlusion_reversal(
         grid_size=grid_size, size_range=size_range, colors=colors
@@ -75,5 +74,46 @@ def generate_occlusion_transform(grid_size=(12, 12), size_range=(2, 5), colors=(
     else:  # "rot180"
         grid_output.rotate_left_90()
         grid_output.rotate_left_90()
+
+    return grid_input, grid_output
+
+
+def generate_occlusion_mirror_x(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+    grid_input, _ = generate_occlusion_reversal(
+        grid_size=grid_size, size_range=size_range, colors=colors
+    )
+    grid_output = grid_input.copy()
+    grid_output.mirror_x()
+
+    return grid_input, grid_output
+
+
+def generate_occlusion_mirror_y(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+    grid_input, _ = generate_occlusion_reversal(
+        grid_size=grid_size, size_range=size_range, colors=colors
+    )
+    grid_output = grid_input.copy()
+    grid_output.mirror_y()
+
+    return grid_input, grid_output
+
+
+def generate_occlusion_rotate_90(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+    grid_input, _ = generate_occlusion_reversal(
+        grid_size=grid_size, size_range=size_range, colors=colors
+    )
+    grid_output = grid_input.copy()
+    grid_output.rotate_left_90()
+
+    return grid_input, grid_output
+
+
+def generate_occlusion_rotate_180(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+    grid_input, _ = generate_occlusion_reversal(
+        grid_size=grid_size, size_range=size_range, colors=colors
+    )
+    grid_output = grid_input.copy()
+    grid_output.rotate_left_90()
+    grid_output.rotate_left_90()
 
     return grid_input, grid_output

@@ -3,8 +3,9 @@ from src.tasks.attraction import (generate_color_attraction, generate_size_attra
 from src.tasks.expansion import (generate_star_expansion_single_step, generate_star_expansion_full,
                                  generate_plus_expansion_full, generate_plus_expansion_single_step,
                                  generate_3diagonal_expansion_full)
-from src.tasks.occlusion import generate_occlusion_reversal, generate_occlusion_transform
-
+from src.tasks.occlusion import (generate_occlusion_reversal, generate_occlusion_transform_random,
+                                 generate_occlusion_rotate_180, generate_occlusion_rotate_90,
+                                 generate_occlusion_mirror_x, generate_occlusion_mirror_y)
 from src.tasks.arithmetic import (generate_majority_recolor, generate_minority_recolor, generate_parity_recolor,
                                   generate_inversion_recolor)
 
@@ -22,7 +23,10 @@ def _save(base, name, idx, input_grid, output_grid):
 def main(N):
     tasks = [
         ("occlusion_reversal", generate_occlusion_reversal),
-        ("occlusion_transform", generate_occlusion_transform),
+        ("occlusion_mirror_x", generate_occlusion_mirror_x),
+        ("occlusion_mirror_y", generate_occlusion_mirror_y),
+        ("occlusion_rotate_90", generate_occlusion_rotate_90),
+        ("occlusion_rotate_180", generate_occlusion_rotate_180),
         ("attraction_color", generate_color_attraction),
         ("attraction_size", generate_size_attraction),
         ("attraction_gravity", generate_gravity),
