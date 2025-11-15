@@ -7,7 +7,6 @@ def generate_occlusion_reversal(grid_size=(12, 12), size_range=(2, 5), colors=("
     grid_input = Grid(rows, cols)
     grid_output = Grid(rows, cols)
 
-    # Random sizes for both blocks
     w, h = random.randint(*size_range), random.randint(*size_range)
 
     # TODO: update the block location generation logic. Use always top-left corner, calculate valid window from
@@ -53,16 +52,13 @@ def generate_occlusion_reversal(grid_size=(12, 12), size_range=(2, 5), colors=("
     return grid_input, grid_output
 
 
-def generate_occlusion_transform_random(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
-    # get a base input from your existing generator
+def generate_occlusion_transform(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
     grid_input, _ = generate_occlusion_reversal(
         grid_size=grid_size, size_range=size_range, colors=colors
     )
 
-    # output = transformed copy of input
     grid_output = grid_input.copy()
 
-    # choose one transform uniformly at random
     transform = random.choice(("mirror_x", "mirror_y", "rot90", "rot180"))
 
     if transform == "mirror_x":
