@@ -1,6 +1,6 @@
-task_id,example_1,example_2,applies
-35,arithmetic_minority_recolor.t1.combined.png,arithmetic_minority_recolor.t2.combined.png,n
-36,arithmetic_majority_recolor.t11.combined.png,arithmetic_majority_recolor.t12.combined.png,y
-37,arithmetic_majority_recolor.t1.combined.png,arithmetic_majority_recolor.t4.combined.png,y
-38,arithmetic_majority_recolor.t6.combined.png,arithmetic_majority_recolor.t9.combined.png,y
-39,arithmetic_inversion_recolor.t1.combined.png,arithmetic_inversion_recolor.t2.combined.png,n
+task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
+5,expansion_star_full.t5.combined.png,expansion_star_full.t6.combined.png,y,expansion,star_step,1
+6,expansion_diagonal_full.t1.combined.png,expansion_diagonal_full.t3.combined.png,n,expansion,diagonal_full,3
+7,expansion_plus_step.t1.combined.png,expansion_plus_step.t2.combined.png,n,expansion,plus_step,1
+8,expansion_star_full.t3.combined.png,expansion_star_full.t4.combined.png,y,expansion,star_full,1
+9,expansion_diagonal_full.t2.combined.png,expansion_diagonal_full.t4.combined.png,n,expansion,diagonal_full,3
