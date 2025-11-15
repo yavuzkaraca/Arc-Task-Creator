@@ -1,6 +1,0 @@
-task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
-5,expansion_star_full.t5.combined.png,expansion_star_full.t6.combined.png,y,expansion,star_step,1
-6,expansion_diagonal_full.t1.combined.png,expansion_diagonal_full.t3.combined.png,n,expansion,diagonal_full,3
-7,expansion_plus_step.t1.combined.png,expansion_plus_step.t2.combined.png,n,expansion,plus_step,1
-8,expansion_star_full.t3.combined.png,expansion_star_full.t4.combined.png,y,expansion,star_full,1
-9,expansion_diagonal_full.t2.combined.png,expansion_diagonal_full.t4.combined.png,n,expansion,diagonal_full,3
