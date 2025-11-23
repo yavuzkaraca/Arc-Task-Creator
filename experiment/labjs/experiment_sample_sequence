@@ -53,7 +53,7 @@ task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
 20,occlusion_reversal.t3.combined.png,occlusion_reversal.t4.combined.png,y,occlusion,reversal,2
 21,occlusion_reversal.t5.combined.png,occlusion_reversal.t6.combined.png,y,occlusion,reversal,2
 22,occlusion_mirror_x.t1.combined.png,occlusion_mirror_x.t2.combined.png,n,occlusion,mirror_x,2
-23,occlusion_rotate_90.t1.combined.png,occlusion_rotate_90.t2.combined.png,n,occlusion,reversal,3
+23,occlusion_rotate_90.t1.combined.png,occlusion_rotate_90.t2.combined.png,n,occlusion,rotate_90,3
 24,occlusion_reversal.t7.combined.png,occlusion_reversal.t8.combined.png,n,occlusion,reversal,2
 
 task_id,example_1,example_2,applies,super_rule,sub_rule,difficulty
