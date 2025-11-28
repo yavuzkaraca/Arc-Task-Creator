@@ -16,7 +16,7 @@ def main():
     demo = extract_participant_demographics_from_raw("data.csv")
     demo["anon_num"] = demo["anon_id"].str.extract(r"(\d+)").astype(int)
     demo = demo.sort_values("anon_num").drop(columns=["anon_num"])
-    demo.to_csv(ROOT / "participant_demographics.csv", index=False)
+    demo.to_csv(ROOT / "participant_data.csv", index=False)
 
     df = preprocess("data.csv")
     df.to_csv(ROOT / "processed_data.csv", index=False)
