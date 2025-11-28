@@ -3,7 +3,8 @@ from pathlib import Path
 from processing import (
     preprocess, keep_only_real_trials,
     compute_participant_stats, compute_difficulty_stats,
-    compute_rule_stats, compute_task_stats, compute_global_stats, compute_duration_stats
+    compute_rule_stats, compute_task_stats, compute_global_stats, compute_duration_stats,
+    extract_participant_demographics_from_raw
 )
 from plots import plot_task_accuracy_hierarchical, plot_task_accuracy_hierarchical_plain, plot_rule_stats, \
     plot_participant_accuracy, plot_participant_scatter
@@ -11,6 +12,11 @@ from plots import plot_task_accuracy_hierarchical, plot_task_accuracy_hierarchic
 
 def main():
     ROOT = Path(__file__).resolve().parent.parent  # one level up
+
+    demo = extract_participant_demographics_from_raw("data.csv")
+    demo["anon_num"] = demo["anon_id"].str.extract(r"(\d+)").astype(int)
+    demo = demo.sort_values("anon_num").drop(columns=["anon_num"])
+    demo.to_csv(ROOT / "participant_demographics.csv", index=False)
 
     df = preprocess("data.csv")
     df.to_csv(ROOT / "processed_data.csv", index=False)

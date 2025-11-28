@@ -1,0 +1,21 @@
+anon_id,age,educational_level,occupation,gender,fb_attention,fb_confidence,fb_difficulty,fb_strategy_text,fb_strategy_used
+t1,27.0,bachelor,student,male,1.0,5.0,5.0,"I created this experiment, its shame i have one mistake :D",1.0
+t2,34.0,bachelor,employed_full_time,male,1.0,2.0,1.0,,0.0
+t3,59.0,bachelor,employed_full_time,male,1.0,2.0,2.0,,0.0
+t4,37.0,master,employed_full_time,female,1.0,3.0,2.0,,0.0
+t5,37.0,bachelor,employed_full_time,female,1.0,4.0,3.0,,0.0
+t6,41.0,bachelor,employed_part_time,female,1.0,3.0,2.0,,0.0
+t7,71.0,master,employed_full_time,male,1.0,2.0,2.0,No specific strategy. I just tried to infer the rules to the best of my ability.,0.0
+t8,59.0,secondary,self-employed,female,1.0,3.0,3.0,"Some involved making note of the amount of squares and the colours. For example, the last set the rule seemed to apply to the majority colour that all the squares changed to in regard to the initial rule... which I may have been wrong about due to my score! ",1.0
+t9,42.0,secondary,self-employed,female,1.0,3.0,3.0,I used logic.,1.0
+t10,58.0,master,self-employed,male,1.0,5.0,3.0,"I kept track of what was changing (color, position, occlusion).",1.0
+t11,34.0,master,employed_full_time,female,1.0,3.0,3.0,I tried to see what the patterns are,1.0
+t12,45.0,master,unemployed,male,1.0,3.0,3.0,,0.0
+t13,46.0,bachelor,employed_full_time,female,1.0,3.0,4.0,i just tried to be attentive and follow the steps,1.0
+t14,54.0,doctorate,employed_full_time,female,1.0,3.0,2.0,,0.0
+t15,31.0,master,self-employed,male,1.0,2.0,4.0,Remember the types of possible rules and work out which one it was,1.0
+t16,37.0,bachelor,employed_full_time,male,1.0,5.0,5.0,I just paid attention to the rules given in the instructions. IT was pretty easy to figure out just by looking at the images.,1.0
+t17,39.0,bachelor,employed_full_time,male,1.0,3.0,3.0,,0.0
+t18,38.0,bachelor,self-employed,male,1.0,4.0,4.0,,0.0
+t19,37.0,master,employed_full_time,male,1.0,5.0,5.0,,0.0
+t20,34.0,primary,employed_full_time,male,1.0,2.0,1.0,I was looking for consistent transformations across input/output pairs.,1.0

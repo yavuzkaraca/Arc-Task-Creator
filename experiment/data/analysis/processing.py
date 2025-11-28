@@ -8,13 +8,13 @@ UNWANTED_COLS = [
     "applies", "response_action", "sender_type"
 ]
 
-LATER_NEEDED_COLS = [
+PARTICIPANT_COLS = [
     "age", "educational_level", "occupation", "gender",
     "fb_attention", "fb_confidence", "fb_difficulty",
     "fb_strategy_text", "fb_strategy_used"
 ]
 
-CLEANED_COLS = UNWANTED_COLS + LATER_NEEDED_COLS
+CLEANED_COLS = UNWANTED_COLS + PARTICIPANT_COLS
 
 DESIRED_ORDER = [
     "anon_id", "sender", "sender_id", "block_type",
@@ -111,6 +111,19 @@ def reorder_columns(df):
     return df[ordered + rest]
 
 
+def assign_anon_id_raw(df: pd.DataFrame) -> pd.DataFrame:
+    ids = []
+    pid = 0
+
+    for s in df["sender_id"].fillna("").astype(str):
+        if s == "0":  # new participant begins
+            pid += 1
+        ids.append(f"t{pid}")
+
+    df["anon_id"] = ids
+    return df
+
+
 # ----------------- Pipeline -----------------
 
 def preprocess(path):
@@ -126,6 +139,22 @@ def preprocess(path):
     df = adjust_decision_responses(df)
     df = clean_difficulty(df)
     return reorder_columns(df)
+
+
+def extract_participant_demographics_from_raw(path: str) -> pd.DataFrame:
+    raw = pd.read_csv(path)
+
+    raw = assign_anon_id_raw(raw)
+
+    demo_rows = raw[raw[PARTICIPANT_COLS].notna().any(axis=1)]
+
+    demo = (
+        demo_rows.groupby("anon_id")
+        .agg(lambda x: x.dropna().iloc[0] if x.notna().any() else None)
+        .reset_index()
+    )
+
+    return demo[["anon_id"] + PARTICIPANT_COLS]
 
 
 # ----------------- Stats -----------------
