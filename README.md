@@ -42,7 +42,8 @@ ArcTaskCreator/
 **Yavuz Karaca** — University of Tübingen  
 
 Special thanks to **Prof. Dr. Martin V. Butz**, **Dr. Michael Bannert**, and **Prof. Dr. Andreas Bartels**  
-for their valuable feedback and discussions on the design and use of these puzzles.
+for their constructive feedback and ideas during puzzle development, 
+and for designing the experimental paradigm in which these tasks are used.
 
 
 
