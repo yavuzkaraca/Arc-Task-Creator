@@ -24,9 +24,9 @@ DESIRED_ORDER = [
 ]
 
 CONF_MAP = {
-    "Very Sure": 0.70,
-    "Sure": 0.30,
-    "Unsure": 0.0,
+    "Very Sure": 1.0,
+    "Sure": 0.70,
+    "Unsure": 0.30,
     "Very Unsure": 0.0
 }
 
