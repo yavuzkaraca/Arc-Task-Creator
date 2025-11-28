@@ -22,7 +22,8 @@ Each rule is implemented as a separate function, and families of rules are organ
 
 ```
 ArcTaskCreator/
-├── misc/                      # Lab.js demo configurations
+├── experiment/                # Experiment design, data, analysis, Lab.js source files
+├── misc/                      # Previous Lab.js demos
 ├── out/                       # Generated examples organized by rule type
 └── src/
     ├── tasks/
