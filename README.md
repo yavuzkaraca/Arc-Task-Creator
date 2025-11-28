@@ -41,9 +41,7 @@ ArcTaskCreator/
 
 **Yavuz Karaca** — University of Tübingen  
 
-Special thanks to **Prof. Dr. Martin V. Butz**, **Dr. Michael Bannert**, and **Prof. Dr. Andreas Bartels**  
-for their constructive feedback and ideas during puzzle development, 
-and for designing the experimental paradigm in which these tasks are used.
+Special thanks to **Prof. Dr. Martin V. Butz**, **Dr. Michael Bannert**, and **Prof. Dr. Andreas Bartels** for designing the experimental paradigm in which these tasks are used, but also for their constructive feedback and ideas during the development.
 
 
 
