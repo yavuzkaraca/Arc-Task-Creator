@@ -52,7 +52,7 @@ def generate_occlusion_reversal(grid_size=(12, 12), size_range=(2, 5), colors=("
     return grid_input, grid_output
 
 
-def generate_occlusion_transform(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
+def generate_occlusion_random_transform(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
     grid_input, _ = generate_occlusion_reversal(
         grid_size=grid_size, size_range=size_range, colors=colors
     )

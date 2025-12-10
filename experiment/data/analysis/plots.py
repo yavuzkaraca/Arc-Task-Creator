@@ -30,6 +30,71 @@ def plot_task_accuracy_hierarchical_plain(task_stats):
     plt.show()
 
 
+def plot_confidence_histogram(conf_series):
+    plt.figure(figsize=(8, 5))
+    plt.hist(conf_series, bins=[-0.05, 0.1, 0.5, 0.9, 1.1],
+             edgecolor="black", color="#666688")
+
+    plt.xticks([0, 0.30, 0.70, 1.0],
+               ["Very Unsure", "Unsure", "Sure", "Very Sure"],
+               rotation=20)
+
+    plt.ylabel("Count")
+    plt.title("Distribution of Confidence Ratings")
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_confidence_over_time(conf_stats):
+    import matplotlib.pyplot as plt
+
+    x = conf_stats["task_int"]
+    y = conf_stats["mean"]
+    sem = conf_stats["sem"]
+
+    plt.figure(figsize=(10, 5))
+    plt.plot(x, y, marker="o", color="#8c1f1f", linewidth=2)
+    plt.fill_between(x, y - sem, y + sem, color="#8c1f1f", alpha=0.25)
+
+    plt.xlabel("Task ID")
+    plt.ylabel("Confidence")
+    plt.title("Confidence Over Experiment Progression")
+    plt.ylim(0, 1)
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_confidence_correctness_correlation(corr_df):
+    df = corr_df.copy().sort_values("corr")
+
+    plt.figure(figsize=(8, 6))
+    plt.barh(df["anon_id"], df["corr"],
+             color="#666688", edgecolor="black")
+
+    plt.xlabel("Correlation (Confidence ↔ Correctness)")
+    plt.title("Metacognitive Accuracy per Participant")
+    plt.grid(axis="x", alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+def plot_reaction_time_over_time(rt_stats):
+    x = rt_stats["task_int"]
+    y = rt_stats["mean"]
+    sem = rt_stats["sem"]
+
+    plt.figure(figsize=(10, 5))
+    plt.plot(x, y, marker="o", color="#335f87", linewidth=2)
+    plt.fill_between(x, y - sem, y + sem, color="#335f87", alpha=0.2)
+
+    plt.xlabel("Task ID")
+    plt.ylabel("Reaction Time (ms)")
+    plt.title("Reaction Time Over Experiment Progression")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
 def plot_task_accuracy_hierarchical(task_stats):
     ts = task_stats.copy()
     ts["task_id"] = ts["task_id"].astype(int)
@@ -88,36 +153,35 @@ def plot_task_accuracy_hierarchical(task_stats):
 def plot_rule_stats(rule_stats):
     rs = rule_stats.copy()
 
-    # enforce grouping order by super_rule
-    ordered_rows = []
+    ordered = []
     for sr in rs["super_rule"].unique():
-        ordered_rows.append(rs[rs["super_rule"] == sr])
-    rs = pd.concat(ordered_rows, ignore_index=True)
+        ordered.append(rs[rs["super_rule"] == sr])
+    rs = pd.concat(ordered, ignore_index=True)
 
-    # labels + colors
-    labels = []
-    colors = []
-    for _, row in rs.iterrows():
-        if pd.isna(row["sub_rule"]) or row["sub_rule"] == "":
-            labels.append(row["super_rule"])          # super
-            colors.append("#333333")                  # dark
-        else:
-            labels.append("   " + row["sub_rule"])    # indented sub
-            colors.append("#888888")                  # lighter
+    labels = [
+        row["super_rule"] if row["sub_rule"] == "" else "   " + row["sub_rule"]
+        for _, row in rs.iterrows()
+    ]
+    colors = ["#333333" if row["sub_rule"] == "" else "#888888"
+              for _, row in rs.iterrows()]
 
     x = range(len(rs))
 
     plt.figure(figsize=(12, 6))
     ax = plt.gca()
 
-    # ---- BARS ----
-    ax.bar(x, rs["accuracy"], color=colors, edgecolor="black")
+    ax.bar(
+        x,
+        rs["accuracy"],
+        yerr=rs["sem"],
+        capsize=5,
+        color=colors,
+        edgecolor="black"
+    )
 
-    # ---- HORIZONTAL LINES ----
-    ax.axhline(0.5, color="black", linestyle="--", linewidth=1.2)   # chance
-    ax.axhline(0.7, color="green", linestyle="--", linewidth=1.2)   # threshold
+    ax.axhline(0.5, color="black", linestyle="--", linewidth=1.2)
+    ax.axhline(0.7, color="green", linestyle="--", linewidth=1.2)
 
-    # ---- AXIS & LABELS ----
     ax.set_xticks(list(x))
     ax.set_xticklabels(labels, rotation=45, ha="right")
     ax.set_ylabel("Accuracy")
@@ -127,7 +191,6 @@ def plot_rule_stats(rule_stats):
     plt.grid(axis="y", alpha=0.3)
     plt.tight_layout()
     plt.show()
-
 
 
 def plot_participant_scatter(stats):
@@ -158,5 +221,76 @@ def plot_participant_accuracy(stats):
     plt.xlabel("Accuracy")
     plt.title("Accuracy per Participant")
     plt.grid(axis="x", alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_block_accuracy(block_stats):
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    bs = block_stats.copy()
+
+    block_labels = {
+        1: "Expansion",
+        2: "Attraction",
+        3: "Occlusion",
+        4: "Arithmetic"
+    }
+    order = ["Expansion", "Attraction", "Occlusion", "Arithmetic"]
+
+    bs["block_name"] = bs["block"].map(block_labels)
+    bs["block_name"] = pd.Categorical(bs["block_name"], categories=order, ordered=True)
+
+    type_order = ["inference", "application"]
+    bs["block_type"] = pd.Categorical(bs["block_type"], categories=type_order, ordered=True)
+
+    bs = bs.sort_values(["block_name", "block_type"])
+
+    pivot_mean = bs.pivot(index="block_name", columns="block_type", values="mean_acc")
+    pivot_sem = bs.pivot(index="block_name", columns="block_type", values="sem")
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    x = np.arange(len(order))
+    width = 0.35
+
+    colors = {"inference": "#1f77b4",
+              "application": "#d62728"}
+
+    ax.bar(
+        x - width / 2,
+        pivot_mean["inference"],
+        width,
+        label="Inference",
+        color=colors["inference"],
+        edgecolor="black",
+        yerr=pivot_sem["inference"],
+        capsize=5
+    )
+
+    ax.bar(
+        x + width / 2,
+        pivot_mean["application"],
+        width,
+        label="Application",
+        color=colors["application"],
+        edgecolor="black",
+        yerr=pivot_sem["application"],
+        capsize=5
+    )
+
+    ax.axhline(0.5, color="black", linestyle="--", linewidth=1.2)
+    ax.axhline(0.7, color="green", linestyle="--", linewidth=1.2)
+
+    ax.set_ylabel("Accuracy")
+    ax.set_ylim(0, 1)
+    ax.set_xticks(x)
+    ax.set_xticklabels(order)
+
+    ax.set_title("Accuracy per Block (Inference vs Application)", fontsize=14)
+    ax.legend()
+    ax.grid(axis="y", alpha=0.3)
+
     plt.tight_layout()
     plt.show()

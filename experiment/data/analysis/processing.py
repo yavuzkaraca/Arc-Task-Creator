@@ -206,14 +206,73 @@ def compute_task_stats(df):
     return s
 
 
+def compute_confidence_stats(df):
+    d = df[df["sender"] == "Confidence Check"].copy()
+    d["conf_num"] = d["response"].map(CONF_MAP)
+    return d["conf_num"].dropna()
+
+
+def compute_confidence_evolution(df):
+    d = df[df["sender"] == "Confidence Check"].copy()
+    d["conf_num"] = d["response"].map(CONF_MAP)
+    d["task_int"] = pd.to_numeric(d["task_id"], errors="coerce")
+
+    conf = (
+        d.groupby("task_int")["conf_num"]
+        .agg(["mean", "std", "count"])
+        .reset_index()
+    )
+    conf["sem"] = conf["std"] / conf["count"] ** 0.5
+    return conf
+
+
+def compute_reaction_time_stats(df):
+    d = df[df["correct"].isin([True, False])].copy()
+    d["task_int"] = pd.to_numeric(d["task_id"], errors="coerce")
+    rt = d.groupby("task_int")["duration"].agg(["mean", "std", "count"]).reset_index()
+    rt["sem"] = rt["std"] / rt["count"] ** 0.5
+    return rt
+
+
+def compute_confidence_correctness_correlation(df):
+    # confidence rows
+    conf = df[df["sender"] == "Confidence Check"].copy()
+    conf["conf_num"] = conf["response"].map(CONF_MAP)
+
+    # decision rows with valid correctness
+    dec = df[df["sender"].isin(["Inference Decision", "Application Decision"])].copy()
+    dec = dec[dec["correct"].isin([True, False])]
+
+    keys = ["anon_id", "task_id", "block_type"]
+
+    merged = conf.merge(
+        dec[keys + ["correct"]],
+        on=keys,
+        how="inner",
+        validate="one_to_one"
+    )
+
+    merged["correct_num"] = merged["correct"].astype(float)
+
+    out = (
+        merged.groupby("anon_id")
+        .apply(lambda g: g["conf_num"].corr(g["correct_num"]))
+        .reset_index(name="corr")
+    )
+    return out
+
+
 def compute_rule_stats(df):
     r = df.dropna(subset=["super_rule", "sub_rule"], how="all")
+
     sup = (
         r.dropna(subset=["super_rule"])
         .groupby("super_rule")
-        .agg(total_correct=("correct", lambda x: (x == True).sum()),
-             total_trials=("correct", lambda x: x.notna().sum()),
-             mean_duration=("duration", "mean"))
+        .agg(
+            total_correct=("correct", lambda x: (x == True).sum()),
+            total_trials=("correct", "count"),
+            mean_duration=("duration", "mean")
+        )
         .reset_index()
     )
     sup["sub_rule"] = ""
@@ -221,15 +280,63 @@ def compute_rule_stats(df):
     sub = (
         r.dropna(subset=["sub_rule"])
         .groupby(["super_rule", "sub_rule"])
-        .agg(total_correct=("correct", lambda x: (x == True).sum()),
-             total_trials=("correct", lambda x: x.notna().sum()),
-             mean_duration=("duration", "mean"))
+        .agg(
+            total_correct=("correct", lambda x: (x == True).sum()),
+            total_trials=("correct", "count"),
+            mean_duration=("duration", "mean")
+        )
         .reset_index()
     )
 
     s = pd.concat([sup, sub], ignore_index=True)
     s["accuracy"] = s["total_correct"] / s["total_trials"]
+
+    part = (
+        r[r["correct"].isin([True, False])]
+        .groupby(["anon_id", "super_rule", "sub_rule"])
+        .agg(acc=("correct", lambda x: (x == True).mean()))
+        .reset_index()
+    )
+
+    sem_tbl = (
+        part.groupby(["super_rule", "sub_rule"])
+        .agg(std=("acc", "std"), n=("acc", "count"))
+        .reset_index()
+    )
+    sem_tbl["sem"] = sem_tbl["std"] / sem_tbl["n"] ** 0.5
+
+    s = s.merge(sem_tbl[["super_rule", "sub_rule", "sem"]], on=["super_rule", "sub_rule"], how="left")
     return s.sort_values(["super_rule", "sub_rule"]).reset_index(drop=True)
+
+
+def compute_block_accuracy(df):
+    d = df.copy()
+
+    d = d[d["correct"].isin([True, False])]
+
+    # numeric task index for grouping into blocks (0–9 → block 1, 10–19 → block 2 ...)
+    d["task_int"] = pd.to_numeric(d["task_id"], errors="coerce")
+    d["block"] = (d["task_int"] // 10) + 1  # blocks: 1, 2, 3, 4
+
+    part = (
+        d.groupby(["anon_id", "block", "block_type"])
+        .agg(acc=("correct", lambda x: (x == True).mean()))
+        .reset_index()
+    )
+
+    res = (
+        part.groupby(["block", "block_type"])
+        .agg(
+            mean_acc=("acc", "mean"),
+            std_acc=("acc", "std"),
+            n=("acc", "count")
+        )
+        .reset_index()
+    )
+
+    res["sem"] = res["std_acc"] / res["n"] ** 0.5
+
+    return res
 
 
 def compute_global_stats(df: pd.DataFrame) -> pd.DataFrame:

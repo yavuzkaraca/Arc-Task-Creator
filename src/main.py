@@ -3,7 +3,7 @@ from src.tasks.attraction import (generate_color_attraction, generate_size_attra
 from src.tasks.expansion import (generate_star_expansion_single_step, generate_star_expansion_full,
                                  generate_plus_expansion_full, generate_plus_expansion_single_step,
                                  generate_3diagonal_expansion_full)
-from src.tasks.occlusion import (generate_occlusion_reversal, generate_occlusion_transform_random,
+from src.tasks.occlusion import (generate_occlusion_reversal,
                                  generate_occlusion_rotate_180, generate_occlusion_rotate_90,
                                  generate_occlusion_mirror_x, generate_occlusion_mirror_y)
 from src.tasks.arithmetic import (generate_majority_recolor, generate_minority_recolor, generate_parity_recolor,
