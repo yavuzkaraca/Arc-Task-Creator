@@ -58,65 +58,45 @@ def generate_odd_color_recolor(grid_size=(12, 12), block_num=(3, 12), colors=("r
     return grid_input, grid_output
 
 
-PLUS_OFFSETS = [(0, 1), (1, 0), (1, 1), (1, 2), (2, 1)]          # 2,4,5,6,8
-CROSS_OFFSETS = [(0, 0), (0, 2), (1, 1), (2, 0), (2, 2)]         # 1,3,5,7,9
-
-
-def _stamp_cells(top_r: int, top_c: int, offsets):
-    """Return absolute (row, col) cells for a 3x3 stamp at top-left (top_r, top_c)."""
-    return [(top_r + dr, top_c + dc) for dr, dc in offsets]
+# Needed for cross plus recolor
+OFFSETS = {
+    "plus":  [(0, 1), (1, 0), (1, 1), (1, 2), (2, 1)],  # 2,4,5,6,8
+    "cross": [(0, 0), (0, 2), (1, 1), (2, 0), (2, 2)],  # 1,3,5,7,9
+}
 
 
 def generate_cross_plus_recolor(
     grid_size=(12, 12),
     stamp_num=(2, 6),
-    bg_color="black",
-    input_shape_color="gray",
-    cross_color="red",
-    plus_color="blue",
+    bg="black",
+    in_color="gray",
+    out_colors=("red", "blue"),  # (cross, plus)
 ):
-    """
-    Place several 3x3 stamps (either CROSS or PLUS) on the grid without overlap.
-    Input: all stamp cells are gray.
-    Output: stamp cells recolored by shape (cross->red, plus->blue).
-    """
     rows, cols = grid_size
-    grid_input, grid_output = Grid(rows, cols, default_color=bg_color), Grid(rows, cols, default_color=bg_color)
+    gi, go = Grid(rows, cols, default_color=bg), Grid(rows, cols, default_color=bg)
 
     k = rand_between(*stamp_num)
+    out_map = {"cross": out_colors[0], "plus": out_colors[1]}
 
-    # Candidate top-left positions where a 3x3 fits
     candidates = [(r, c) for r in range(rows - 2) for c in range(cols - 2)]
     random.shuffle(candidates)
 
-    used_cells = set()
-    placed = []
+    used = set()
+    placed = []  # (shape, [(r,c),...])
 
     for top_r, top_c in candidates:
-        shape = random.choice(["cross", "plus"])
-        offsets = CROSS_OFFSETS if shape == "cross" else PLUS_OFFSETS
-        cells = _stamp_cells(top_r, top_c, offsets)
-
-        # Ensure all cells are inside and non-overlapping (stamps may touch, but not share cells)
-        if any((r, c) in used_cells for r, c in cells):
+        shape = random.choice(("cross", "plus"))
+        cells = [(top_r + dr, top_c + dc) for dr, dc in OFFSETS[shape]]
+        if any(cell in used for cell in cells):
             continue
-
+        used.update(cells)
         placed.append((shape, cells))
-        for r, c in cells:
-            used_cells.add((r, c))
-
-        if len(placed) >= k:
+        if len(placed) == k:
             break
 
-    # Fill input
-    for _, cells in placed:
-        for r, c in cells:
-            grid_input.fill_cell(r, c, input_shape_color)
-
-    # Fill output: recolor by shape
     for shape, cells in placed:
-        out_color = cross_color if shape == "cross" else plus_color
         for r, c in cells:
-            grid_output.fill_cell(r, c, out_color)
+            gi.fill_cell(r, c, in_color)
+            go.fill_cell(r, c, out_map[shape])
 
-    return grid_input, grid_output
+    return gi, go
