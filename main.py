@@ -40,8 +40,6 @@ from src.tasks.attraction import (
 )
 
 
-# Comment out or in tasks here to limit generation
-
 def main(N=3):
     tasks = {
         # ("occlusion_reversal": generate_occlusion_reversal),
