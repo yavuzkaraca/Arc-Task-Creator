@@ -60,18 +60,22 @@ def generate_odd_color_recolor(grid_size=(12, 12), block_num=(3, 12), colors=("r
 
 # Needed for cross plus recolor
 OFFSETS = {
-    "plus":  [(0, 1), (1, 0), (1, 1), (1, 2), (2, 1)],  # 2,4,5,6,8
+    "plus": [(0, 1), (1, 0), (1, 1), (1, 2), (2, 1)],  # 2,4,5,6,8
     "cross": [(0, 0), (0, 2), (1, 1), (2, 0), (2, 2)],  # 1,3,5,7,9
 }
 
 
+# ------------ Use this method for testing -----------------
+
+
 def generate_cross_plus_recolor(
-    grid_size: Tuple[int, int] = (12, 12),
-    stamp_num: Tuple[int, int] = (2, 6),
-    bg: str = "black",
-    in_color: str = "gray",
-    out_colors: Tuple[str, str] = ("red", "blue"),  # (cross, plus)
+        grid_size: Tuple[int, int] = (12, 12),
+        stamp_num: Tuple[int, int] = (2, 6),
+        bg: str = "black",
+        in_color: str = "gray",
+        out_colors: Tuple[str, str] = ("red", "blue"),  # (cross, plus)
 ) -> Tuple[Grid, Grid, Dict[str, Any]]:
+
     rows, cols = grid_size
     grid_input, grid_output = Grid(rows, cols, default_color=bg), Grid(rows, cols, default_color=bg)
 

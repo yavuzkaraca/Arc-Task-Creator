@@ -6,7 +6,7 @@ from src.visualize import save_grid, save_combined_grids
 from src.stimulus import Stimulus
 
 
-def run_task(name, gen):
+def generate_task(name, gen):
 
     idx, base = next_run_idx(name.replace(".", "_"))
 
