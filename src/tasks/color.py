@@ -1,7 +1,7 @@
 import random
 from typing import Dict, Tuple, Any, List
-from util import rand_between
 from src.grid import Grid
+from util import rand_between
 
 
 def generate_inversion_recolor(grid_size=(12, 12), block_num=(1, 6), colors=("red", "blue")):
@@ -75,7 +75,6 @@ def generate_cross_plus_recolor(
         in_color: str = "gray",
         out_colors: Tuple[str, str] = ("red", "blue"),  # (cross, plus)
 ) -> Tuple[Grid, Grid, Dict[str, Any]]:
-
     rows, cols = grid_size
     grid_input, grid_output = Grid(rows, cols, default_color=bg), Grid(rows, cols, default_color=bg)
 

@@ -37,7 +37,7 @@ from src.dataset import generate_task
 
 # Comment out or in tasks here to limit generation
 
-def main(N=15):
+def main(N=3):
     tasks = {
         # ("occlusion_reversal": generate_occlusion_reversal),
         # ("occlusion_mirror_x": generate_occlusion_mirror_x),

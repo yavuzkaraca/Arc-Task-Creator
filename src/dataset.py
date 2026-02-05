@@ -1,27 +1,9 @@
-import json
 import random
 from pathlib import Path
 
 from src.visualize import save_grid, save_combined_grids
 from src.stimulus import Stimulus
-
-
-def _append_jsonl(path: Path, obj: dict) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(obj, ensure_ascii=False) + "\n")
-
-
-def _next_idx(jsonl_path: Path) -> int:
-    if not jsonl_path.exists():
-        return 1
-    with jsonl_path.open("r", encoding="utf-8") as f:
-        return sum(1 for _ in f) + 1
-
-
-def _new_seed() -> int:
-    # 32-bit seed; stable across platforms
-    return random.randrange(0, 2**32)
+from util import append_jsonl, next_idx, new_seed
 
 
 def generate_task(rule: str, gen, out_root: str = "out") -> None:
@@ -29,8 +11,8 @@ def generate_task(rule: str, gen, out_root: str = "out") -> None:
     base.mkdir(parents=True, exist_ok=True)
     jsonl_path = base / "stimuli.jsonl"
 
-    idx = _next_idx(jsonl_path)
-    seed = _new_seed()
+    idx = next_idx(jsonl_path)
+    seed = new_seed()
     random.seed(seed)
 
     produced = gen()
@@ -60,4 +42,4 @@ def generate_task(rule: str, gen, out_root: str = "out") -> None:
     rec = stim.to_json_dict()
     rec["paths"] = {"input": str(p_in), "output": str(p_out), "combined": str(p_comb)}
 
-    _append_jsonl(jsonl_path, rec)
+    append_jsonl(jsonl_path, rec)
