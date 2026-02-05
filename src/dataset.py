@@ -55,7 +55,6 @@ def generate_task(rule: str, gen, out_root: str = "out") -> None:
         params=params,
         input_grid=inp,
         output_grid=out,
-        provenance={"generator": "ArcTaskCreator"},
     )
 
     rec = stim.to_json_dict()
