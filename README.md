@@ -12,6 +12,7 @@ The project generates pairs of grids (an **input** and its corresponding **outpu
 - **Expansion** (e.g. star, plus, diagonal, single-step / infinite growth)
 - **Attraction/repulsion** (e.g. pull, push, fall, float)
 - **Occlusion** (e.g. reversal, rotation, mirror)
+- **Color** (e.g. shape based recoloring)
 - **Arithmetic** (e.g. inversion, counting, majority/minority, parity)
 
 Each rule is implemented as a separate function, and families of rules are organized within .py modules.
@@ -22,22 +23,23 @@ Each rule is implemented as a separate function, and families of rules are organ
 
 ```
 ArcTaskCreator/
-├── experiment/                # Experiment design, data, analysis, Lab.js source files
-├── misc/                      # Previous Lab.js demos
+├── experiment/                # Pilot experiment design, data, analysis, Lab.js source files
 ├── out/                       # Generated examples organized by rule type
 └── src/
     ├── tasks/
     │   ├── arithmetic.py
     │   ├── attraction.py
+    │   ├── color.py
     │   ├── expansion.py
     │   └── occlusion.py
     ├── grid.py                # Grid logic and data structure
+    ├── stimulus.py            # Stimulus dataclass for JSON dataset overview
     ├── util.py                # Helper functions
-    ├── visualize.py           # Visualization and figure generation
+    ├── visualize.py           # Visualization i.e. figure generation
     └── main.py                # Main entry point for task generation
 ```
 
-## ✨ Author & Acknowledgments
+## Author & Acknowledgments
 
 **Yavuz Karaca** — University of Tübingen  
 
