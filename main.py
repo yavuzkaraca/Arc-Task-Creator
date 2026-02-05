@@ -32,7 +32,7 @@ from src.tasks.attraction import (
     generate_float,
 )
 
-from src.run_task import run_task
+from src.dataset import generate_task
 
 
 # Comment out or in tasks here to limit generation
@@ -65,7 +65,7 @@ def main(N=15):
 
     for name, gen in tasks.items():
         for _ in range(N):
-            run_task(name, gen)
+            generate_task(name, gen)
 
 
 if __name__ == "__main__":

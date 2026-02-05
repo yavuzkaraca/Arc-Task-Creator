@@ -4,10 +4,6 @@ import re
 import json
 from typing import Any, Dict, Tuple
 
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-
 
 def next_run_idx(task_name: str):
     """
