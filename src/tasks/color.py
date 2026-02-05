@@ -1,5 +1,5 @@
 import random
-
+from typing import Dict, Tuple, Any, List
 from util import rand_between
 from src.grid import Grid
 
@@ -66,14 +66,14 @@ OFFSETS = {
 
 
 def generate_cross_plus_recolor(
-    grid_size=(12, 12),
-    stamp_num=(2, 6),
-    bg="black",
-    in_color="gray",
-    out_colors=("red", "blue"),  # (cross, plus)
-):
+    grid_size: Tuple[int, int] = (12, 12),
+    stamp_num: Tuple[int, int] = (2, 6),
+    bg: str = "black",
+    in_color: str = "gray",
+    out_colors: Tuple[str, str] = ("red", "blue"),  # (cross, plus)
+) -> Tuple[Grid, Grid, Dict[str, Any]]:
     rows, cols = grid_size
-    gi, go = Grid(rows, cols, default_color=bg), Grid(rows, cols, default_color=bg)
+    grid_input, grid_output = Grid(rows, cols, default_color=bg), Grid(rows, cols, default_color=bg)
 
     k = rand_between(*stamp_num)
     out_map = {"cross": out_colors[0], "plus": out_colors[1]}
@@ -82,7 +82,7 @@ def generate_cross_plus_recolor(
     random.shuffle(candidates)
 
     used = set()
-    placed = []  # (shape, [(r,c),...])
+    placed: List[Tuple[str, List[Tuple[int, int]]]] = []
 
     for top_r, top_c in candidates:
         shape = random.choice(("cross", "plus"))
@@ -96,7 +96,16 @@ def generate_cross_plus_recolor(
 
     for shape, cells in placed:
         for r, c in cells:
-            gi.fill_cell(r, c, in_color)
-            go.fill_cell(r, c, out_map[shape])
+            grid_input.fill_cell(r, c, in_color)
+            grid_output.fill_cell(r, c, out_map[shape])
 
-    return gi, go
+    params = {
+        "grid_size": grid_size,
+        "stamp_num": stamp_num,
+        "k": k,
+        "bg": bg,
+        "in_color": in_color,
+        "out_colors": list(out_colors),
+        "placed": [{"shape": s, "cells": cells} for s, cells in placed],
+    }
+    return grid_input, grid_output, params
