@@ -78,27 +78,3 @@ def generate_inversion_recolor(grid_size=(12, 12), block_num=(1, 6), colors=("re
     return grid_input, grid_output
 
 
-def generate_parity_recolor(grid_size=(12, 12), block_num=(1, 6), colors=("red", "blue")):
-    """
-    If the total number of blocks is odd → output = red,
-    If even → output = blue.
-    """
-    rows, cols = grid_size
-    grid_input, grid_output = Grid(rows, cols), Grid(rows, cols)
-
-    n = rand_between(*block_num)
-
-    all_positions = random.sample([(x, y) for x in range(cols) for y in range(rows)], n)
-
-    for x, y in all_positions:
-        grid_input.fill_cell(x, y, random.choice(colors))
-
-    if n % 2 == 1:  # odd
-        output_color = colors[0]
-    else:            # even
-        output_color = colors[1]
-
-    for x, y in all_positions:
-        grid_output.fill_cell(x, y, output_color)
-
-    return grid_input, grid_output
