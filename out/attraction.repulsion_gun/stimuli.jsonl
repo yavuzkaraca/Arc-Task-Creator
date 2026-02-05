@@ -1,0 +1,3 @@
+{"id": "attraction.repulsion_gun.t1", "rule": "attraction.repulsion_gun", "family": "attraction", "seed": 392834614, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.repulsion_gun.t2", "rule": "attraction.repulsion_gun", "family": "attraction", "seed": 2109688688, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.repulsion_gun.t3", "rule": "attraction.repulsion_gun", "family": "attraction", "seed": 3605666599, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

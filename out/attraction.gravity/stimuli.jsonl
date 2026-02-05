@@ -1,0 +1,3 @@
+{"id": "attraction.gravity.t1", "rule": "attraction.gravity", "family": "attraction", "seed": 2015623692, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.gravity.t2", "rule": "attraction.gravity", "family": "attraction", "seed": 2353240333, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.gravity.t3", "rule": "attraction.gravity", "family": "attraction", "seed": 284889310, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

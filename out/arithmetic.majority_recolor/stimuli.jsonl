@@ -1,0 +1,3 @@
+{"id": "arithmetic.majority_recolor.t1", "rule": "arithmetic.majority_recolor", "family": "arithmetic", "seed": 2406051453, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}
+{"id": "arithmetic.majority_recolor.t2", "rule": "arithmetic.majority_recolor", "family": "arithmetic", "seed": 841241358, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 6}, "difficulty": null}
+{"id": "arithmetic.majority_recolor.t3", "rule": "arithmetic.majority_recolor", "family": "arithmetic", "seed": 3224000221, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 5}, "difficulty": null}

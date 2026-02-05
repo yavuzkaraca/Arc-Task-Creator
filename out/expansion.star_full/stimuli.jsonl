@@ -1,0 +1,3 @@
+{"id": "expansion.star_full.t1", "rule": "expansion.star_full", "family": "expansion", "seed": 2228839829, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_full.t2", "rule": "expansion.star_full", "family": "expansion", "seed": 101791035, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.star_full.t3", "rule": "expansion.star_full", "family": "expansion", "seed": 632510924, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}

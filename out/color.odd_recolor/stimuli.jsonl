@@ -1,0 +1,3 @@
+{"id": "color.odd_recolor.t1", "rule": "color.odd_recolor", "family": "color", "seed": 689313972, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 8}, "difficulty": null}
+{"id": "color.odd_recolor.t2", "rule": "color.odd_recolor", "family": "color", "seed": 861652303, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 9}, "difficulty": null}
+{"id": "color.odd_recolor.t3", "rule": "color.odd_recolor", "family": "color", "seed": 4264055084, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 8}, "difficulty": null}

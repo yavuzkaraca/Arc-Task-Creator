@@ -1,0 +1,3 @@
+{"id": "mirror_rotate.occlusion_rotate_180.t1", "rule": "mirror_rotate.occlusion_rotate_180", "family": "mirror_rotate", "seed": 890627871, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "mirror_rotate.occlusion_rotate_180.t2", "rule": "mirror_rotate.occlusion_rotate_180", "family": "mirror_rotate", "seed": 3052337391, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "mirror_rotate.occlusion_rotate_180.t3", "rule": "mirror_rotate.occlusion_rotate_180", "family": "mirror_rotate", "seed": 190325382, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

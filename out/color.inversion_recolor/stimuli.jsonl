@@ -1,0 +1,3 @@
+{"id": "color.inversion_recolor.t1", "rule": "color.inversion_recolor", "family": "color", "seed": 858111406, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 8}, "difficulty": null}
+{"id": "color.inversion_recolor.t2", "rule": "color.inversion_recolor", "family": "color", "seed": 3133115616, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}
+{"id": "color.inversion_recolor.t3", "rule": "color.inversion_recolor", "family": "color", "seed": 2180362620, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 9}, "difficulty": null}

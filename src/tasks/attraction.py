@@ -26,7 +26,13 @@ def generate_color_attraction(grid_size=(12, 12), size_range=(2, 5), colors=("re
         grid_input.rotate_left_90()
         grid_output.rotate_left_90()
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": 2
+    }
+
+    return grid_input, grid_output, params
 
 
 def generate_size_attraction(grid_size=(12, 12), size_range=(3, 6), colors=("red", "blue")):
@@ -55,7 +61,13 @@ def generate_size_attraction(grid_size=(12, 12), size_range=(3, 6), colors=("red
         grid_input.rotate_left_90()
         grid_output.rotate_left_90()
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": 2
+    }
+
+    return grid_input, grid_output, params
 
 
 def generate_repulsion_gun(grid_size=(12, 12), size_range=(3, 6), colors=("red", "blue")):
@@ -82,7 +94,13 @@ def generate_repulsion_gun(grid_size=(12, 12), size_range=(3, 6), colors=("red",
         grid_input.rotate_left_90()
         grid_output.rotate_left_90()
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": 2
+    }
+
+    return grid_input, grid_output, params
 
 
 def generate_repulsion_ambiguous(grid_size=(12, 12), size_range=(1, 6), colors=("red", "blue")):
@@ -107,7 +125,13 @@ def generate_repulsion_ambiguous(grid_size=(12, 12), size_range=(1, 6), colors=(
         grid_input.rotate_left_90()
         grid_output.rotate_left_90()
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": 2
+    }
+
+    return grid_input, grid_output, params
 
 
 def generate_gravity(grid_size=(12, 12), size_range=(1, 6), colors=("red", "blue")):
@@ -130,15 +154,27 @@ def generate_gravity(grid_size=(12, 12), size_range=(1, 6), colors=("red", "blue
     grid_output.fill_rect(xmin=x1, ymin=0, xmax=x1 + w1 - 1, ymax=0 + h1 - 1, color=colors[c_big])
     grid_output.fill_rect(xmin=x2, ymin=0, xmax=x2 + w2 - 1, ymax=0 + h2 - 1, color=colors[c_small])
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": 2
+    }
+
+    return grid_input, grid_output, params
 
 
 def generate_float(grid_size=(12, 12), size_range=(1, 6), colors=("red", "blue")):
-    grid_input, grid_output = generate_gravity(grid_size=(12, 12), size_range=(1, 6), colors=("red", "blue"))
-
+    grid_input, grid_output, params = generate_gravity(grid_size=grid_size, size_range=size_range, colors=colors)
+    # TODO: funny idea
     grid_input.rotate_left_90()
     grid_input.rotate_left_90()
     grid_output.rotate_left_90()
     grid_output.rotate_left_90()
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": 2
+    }
+
+    return grid_input, grid_output, params

@@ -1,0 +1,3 @@
+{"id": "attraction.size.t1", "rule": "attraction.size", "family": "attraction", "seed": 518060888, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t2", "rule": "attraction.size", "family": "attraction", "seed": 3703829285, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t3", "rule": "attraction.size", "family": "attraction", "seed": 2897407482, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

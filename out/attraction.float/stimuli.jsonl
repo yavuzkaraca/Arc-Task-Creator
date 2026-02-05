@@ -1,0 +1,3 @@
+{"id": "attraction.float.t1", "rule": "attraction.float", "family": "attraction", "seed": 1038742850, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.float.t2", "rule": "attraction.float", "family": "attraction", "seed": 1488296010, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.float.t3", "rule": "attraction.float", "family": "attraction", "seed": 2554955150, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

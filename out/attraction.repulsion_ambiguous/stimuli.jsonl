@@ -1,0 +1,3 @@
+{"id": "attraction.repulsion_ambiguous.t1", "rule": "attraction.repulsion_ambiguous", "family": "attraction", "seed": 4279925702, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.repulsion_ambiguous.t2", "rule": "attraction.repulsion_ambiguous", "family": "attraction", "seed": 2274798042, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.repulsion_ambiguous.t3", "rule": "attraction.repulsion_ambiguous", "family": "attraction", "seed": 3190316336, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

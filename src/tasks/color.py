@@ -27,7 +27,13 @@ def generate_inversion_recolor(grid_size=(12, 12), block_num=(1, 6), colors=("re
     for x, y in color2_positions:
         grid_output.fill_cell(x, y, color1)
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": n1+n2
+    }
+
+    return grid_input, grid_output, params
 
 
 def generate_odd_color_recolor(grid_size=(12, 12), block_num=(3, 12), colors=("red", "blue")):
@@ -55,7 +61,13 @@ def generate_odd_color_recolor(grid_size=(12, 12), block_num=(3, 12), colors=("r
     for x, y in all_positions:
         grid_output.fill_cell(x, y, odd_color)
 
-    return grid_input, grid_output
+    params = {
+        "grid_size": grid_size,
+        "colors": colors,
+        "n_objects": n
+    }
+
+    return grid_input, grid_output, params
 
 
 # Needed for cross plus recolor
@@ -65,21 +77,12 @@ OFFSETS = {
 }
 
 
-# ------------ Use this method for testing -----------------
-
-
-def generate_cross_plus_recolor(
-        grid_size: Tuple[int, int] = (12, 12),
-        stamp_num: Tuple[int, int] = (2, 6),
-        bg: str = "black",
-        in_color: str = "gray",
-        out_colors: Tuple[str, str] = ("red", "blue"),  # (cross, plus)
-) -> Tuple[Grid, Grid, Dict[str, Any]]:
+def generate_cross_plus_recolor(grid_size=(12, 12), stamp_num=(2, 6), colors=("gray", "red", "blue")):
     rows, cols = grid_size
-    grid_input, grid_output = Grid(rows, cols, default_color=bg), Grid(rows, cols, default_color=bg)
+    grid_input, grid_output = Grid(rows, cols), Grid(rows, cols)
 
     k = rand_between(*stamp_num)
-    out_map = {"cross": out_colors[0], "plus": out_colors[1]}
+    out_map = {"cross": colors[1], "plus": colors[2]}
 
     candidates = [(r, c) for r in range(rows - 2) for c in range(cols - 2)]
     random.shuffle(candidates)
@@ -99,16 +102,13 @@ def generate_cross_plus_recolor(
 
     for shape, cells in placed:
         for r, c in cells:
-            grid_input.fill_cell(r, c, in_color)
+            grid_input.fill_cell(r, c, colors[0])
             grid_output.fill_cell(r, c, out_map[shape])
 
     params = {
         "grid_size": grid_size,
-        "stamp_num": stamp_num,
-        "k": k,
-        "bg": bg,
-        "in_color": in_color,
-        "out_colors": list(out_colors),
-        "placed": [{"shape": s, "cells": cells} for s, cells in placed],
+        "colors": colors,
+        "n_objects": len(placed)
     }
+
     return grid_input, grid_output, params

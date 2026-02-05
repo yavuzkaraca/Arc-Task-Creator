@@ -1,0 +1,3 @@
+{"id": "occlusion_reversal.t1", "rule": "occlusion_reversal", "family": "occlusion_reversal", "seed": 3373915424, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "occlusion_reversal.t2", "rule": "occlusion_reversal", "family": "occlusion_reversal", "seed": 2111652949, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "occlusion_reversal.t3", "rule": "occlusion_reversal", "family": "occlusion_reversal", "seed": 1367570754, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
