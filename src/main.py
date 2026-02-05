@@ -9,15 +9,15 @@ from src.tasks.occlusion import (generate_occlusion_reversal,
 from src.tasks.arithmetic import (generate_majority_recolor, generate_minority_recolor, generate_parity_recolor)
 from src.tasks.color import (generate_inversion_recolor, generate_odd_color_recolor, generate_cross_plus_recolor)
 
-from src.visualize import render_save_grid, render_save_combined_grids
+from src.visualize import save_grid, save_combined_grids
 from src.util import next_run_idx
 
 
 def _save(base, name, idx, input_grid, output_grid):
     prefix = f"{name}.t{idx}"
-    render_save_grid(input_grid, f"{base}/{prefix}.input.png")
-    render_save_grid(output_grid, f"{base}/{prefix}.output.png")
-    render_save_combined_grids(input_grid, output_grid, f"{base}/{prefix}.combined.png")
+    save_grid(input_grid, f"{base}/{prefix}.input.png")
+    save_grid(output_grid, f"{base}/{prefix}.output.png")
+    save_combined_grids(input_grid, output_grid, f"{base}/{prefix}.combined.png")
 
 
 def main(N):

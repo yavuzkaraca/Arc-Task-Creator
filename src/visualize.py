@@ -31,7 +31,7 @@ def render_grid(grid):
     plt.show()
 
 
-def render_save_grid(grid, save_path="output.png"):
+def save_grid(grid, save_path="output.png"):
     rows, cols = grid.rows, grid.cols
     color_grid = grid.as_list()
 
@@ -61,7 +61,7 @@ def render_save_grid(grid, save_path="output.png"):
     plt.close()
 
 
-def render_save_combined_grids(grid1, grid2, save_path="combined.png"):
+def save_combined_grids(grid1, grid2, save_path="combined.png"):
     rows1, cols1 = grid1.rows, grid1.cols
     rows2, cols2 = grid2.rows, grid2.cols
 
