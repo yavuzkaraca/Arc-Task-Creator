@@ -3,14 +3,13 @@ from __future__ import annotations
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, List, Optional
 
-from src.grid import Grid  # change if your Grid is elsewhere
-
+from src.grid import Grid
 
 @dataclass(frozen=True)
 class Stimulus:
     id: str
     rule: str          # e.g. "color.cross_plus_recolor"
-    family: str        # e.g. "color" (inferred in generate_task)
+    family: str        # e.g. "color" (inferred)
     seed: int
     params: Dict[str, Any]
     input_grid: Grid
