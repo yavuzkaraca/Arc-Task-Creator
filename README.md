@@ -13,6 +13,7 @@ The project generates pairs of grids (an **input** and its corresponding **outpu
 - **Attraction/repulsion** (e.g. pull, push, fall, float)
 - **Occlusion** (e.g. reversal, rotation, mirror)
 - **Color** (e.g. shape based recoloring)
+- **Mirror/rotate** (e.g. x mirror, y mirror, rotate 90, rotate 180)
 - **Arithmetic** (e.g. inversion, counting, majority/minority, parity)
 
 Each rule is implemented as a separate function, and families of rules are organized within .py modules.
@@ -30,6 +31,7 @@ ArcTaskCreator/
     │   ├── arithmetic.py
     │   ├── attraction.py
     │   ├── color.py
+    │   ├── mirror_rotate.py
     │   ├── expansion.py
     │   └── occlusion.py
     ├── grid.py                # Grid logic and data structure

@@ -178,3 +178,37 @@ def generate_float(grid_size=(12, 12), size_range=(1, 6), colors=("red", "blue")
     }
 
     return grid_input, grid_output, params
+
+
+def generate_dots_gravity(
+        grid_size=(12, 12),
+        n_objects=(3, 10),
+        colors=("red", "blue"),
+):
+    rows, cols = grid_size
+    grid_input = Grid(rows, cols)
+
+    n = rand_between(*n_objects)
+    positions = random.sample([(r, c) for r in range(rows) for c in range(cols)], n)
+
+    for r, c in positions:
+        grid_input.fill_cell(r, c, random.choice(colors))
+
+    grid_output = apply_gravity(grid_input)
+
+    params = {"grid_size": grid_size, "colors": colors, "n_objects": n}
+    return grid_input, grid_output, params
+
+
+def apply_gravity(grid: Grid) -> Grid:
+    rows, cols = grid.rows, grid.cols
+    out = Grid(rows, cols)
+
+    for c in range(cols):
+        col = [grid.get(r, c) for r in range(rows) if grid.get(r, c) != "black"]
+        r = 0  # bottom is row 0 in coordinate system
+        for color in col:  # keep order stable
+            out.fill_cell(r, c, color)
+            r += 1
+
+    return out
