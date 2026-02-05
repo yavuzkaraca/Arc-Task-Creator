@@ -3,18 +3,6 @@ import random
 import re
 
 
-def next_run_dir(task_name: str) -> str:
-    """
-    Outdated due to web app not working with folders
-    """
-    base = os.path.join("../out", task_name)
-    os.makedirs(base, exist_ok=True)
-    idx = 1 + max([int(d[1:]) for d in os.listdir(base) if d.startswith("t") and d[1:].isdigit()] or [0])
-    run = os.path.join(base, f"t{idx}")
-    os.makedirs(run, exist_ok=True)
-    return run
-
-
 def next_run_idx(task_name: str):
     """
     Return (next_index, base_dir) for the given task_name.
