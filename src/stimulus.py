@@ -5,20 +5,17 @@ from typing import Any, Dict, List, Optional
 
 from src.grid import Grid
 
+
 @dataclass(frozen=True)
 class Stimulus:
     id: str
-    rule: str          # e.g. "color.cross_plus_recolor"
-    family: str        # e.g. "color" (inferred)
+    rule: str  # e.g. "color.cross_plus_recolor"
+    family: str  # e.g. "color" (inferred)
     seed: int
     params: Dict[str, Any]
     input_grid: Grid
     output_grid: Grid
-
-    forced_tags: Optional[List[str]] = None
-    observed_tags: Optional[List[str]] = None
     difficulty: Optional[Dict[str, Any]] = None
-    provenance: Optional[Dict[str, Any]] = None
 
     def to_json_dict(self) -> Dict[str, Any]:
         d = asdict(self)
