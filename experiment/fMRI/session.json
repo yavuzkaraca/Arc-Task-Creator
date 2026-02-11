@@ -1,0 +1,2403 @@
+{
+  "participant": "p001",
+  "keys": {
+    "same": "LeftArrow",
+    "different": "RightArrow"
+  },
+  "blocks": [
+    {
+      "block_id": 1,
+      "family": "expansion",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/expansion.plus_full/expansion.plus_full.t17.combined.png",
+                "out/expansion.plus_full/expansion.plus_full.t16.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_full",
+              "ids": [
+                "expansion.plus_full.t17",
+                "expansion.plus_full.t16"
+              ],
+              "seeds": [
+                1248111807,
+                2852239957
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/expansion.star_step/expansion.star_step.t10.combined.png",
+                "out/expansion.star_step/expansion.star_step.t4.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_step",
+              "ids": [
+                "expansion.star_step.t10",
+                "expansion.star_step.t4"
+              ],
+              "seeds": [
+                2867346622,
+                1089842962
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_step/expansion.star_step.t17.combined.png",
+                "out/expansion.star_step/expansion.star_step.t13.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_step",
+              "ids": [
+                "expansion.star_step.t17",
+                "expansion.star_step.t13"
+              ],
+              "seeds": [
+                1447019650,
+                337679739
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.3diagonal_full/expansion.3diagonal_full.t11.combined.png",
+                "out/expansion.3diagonal_full/expansion.3diagonal_full.t1.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.3diagonal_full",
+              "ids": [
+                "expansion.3diagonal_full.t11",
+                "expansion.3diagonal_full.t1"
+              ],
+              "seeds": [
+                4118046611,
+                316070923
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_step/expansion.plus_step.t13.combined.png",
+                "out/expansion.plus_step/expansion.plus_step.t12.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_step",
+              "ids": [
+                "expansion.plus_step.t13",
+                "expansion.plus_step.t12"
+              ],
+              "seeds": [
+                4183086005,
+                3876120764
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_step/expansion.plus_step.t1.combined.png",
+                "out/expansion.plus_step/expansion.plus_step.t6.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_step",
+              "ids": [
+                "expansion.plus_step.t1",
+                "expansion.plus_step.t6"
+              ],
+              "seeds": [
+                3910346993,
+                3508234890
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_step/expansion.star_step.t18.combined.png",
+                "out/expansion.star_step/expansion.star_step.t16.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_step",
+              "ids": [
+                "expansion.star_step.t18",
+                "expansion.star_step.t16"
+              ],
+              "seeds": [
+                104714876,
+                1819912889
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t8.combined.png",
+                "out/expansion.star_full/expansion.star_full.t7.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t8",
+                "expansion.star_full.t7"
+              ],
+              "seeds": [
+                1859325829,
+                1249398712
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_step/expansion.plus_step.t10.combined.png",
+                "out/expansion.plus_step/expansion.plus_step.t15.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_step",
+              "ids": [
+                "expansion.plus_step.t10",
+                "expansion.plus_step.t15"
+              ],
+              "seeds": [
+                542153271,
+                2423476132
+              ],
+              "correct": "different"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t10.combined.png",
+                "out/expansion.star_full/expansion.star_full.t14.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t10",
+                "expansion.star_full.t14"
+              ],
+              "seeds": [
+                3969978147,
+                1546321632
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t1.combined.png",
+                "out/expansion.star_full/expansion.star_full.t18.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t1",
+                "expansion.star_full.t18"
+              ],
+              "seeds": [
+                2228839829,
+                1360721989
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t16.combined.png",
+                "out/expansion.star_full/expansion.star_full.t6.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t16",
+                "expansion.star_full.t6"
+              ],
+              "seeds": [
+                4067965976,
+                3678311653
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t9.combined.png",
+                "out/expansion.star_full/expansion.star_full.t11.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t9",
+                "expansion.star_full.t11"
+              ],
+              "seeds": [
+                3030778104,
+                366261761
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t17.combined.png",
+                "out/expansion.star_full/expansion.star_full.t3.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t17",
+                "expansion.star_full.t3"
+              ],
+              "seeds": [
+                855393677,
+                632510924
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_full/expansion.plus_full.t18.combined.png",
+                "out/expansion.plus_full/expansion.plus_full.t3.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_full",
+              "ids": [
+                "expansion.plus_full.t18",
+                "expansion.plus_full.t3"
+              ],
+              "seeds": [
+                953716353,
+                1529551352
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.3diagonal_full/expansion.3diagonal_full.t7.combined.png",
+                "out/expansion.3diagonal_full/expansion.3diagonal_full.t14.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.3diagonal_full",
+              "ids": [
+                "expansion.3diagonal_full.t7",
+                "expansion.3diagonal_full.t14"
+              ],
+              "seeds": [
+                360172849,
+                1210801259
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t4.combined.png",
+                "out/expansion.star_full/expansion.star_full.t5.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t4",
+                "expansion.star_full.t5"
+              ],
+              "seeds": [
+                4037531699,
+                321398905
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t13.combined.png",
+                "out/expansion.star_full/expansion.star_full.t12.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t13",
+                "expansion.star_full.t12"
+              ],
+              "seeds": [
+                2898701359,
+                1765692885
+              ],
+              "correct": "same"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": 2,
+      "family": "attraction",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t4.combined.png",
+                "out/attraction.color/attraction.color.t11.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t4",
+                "attraction.color.t11"
+              ],
+              "seeds": [
+                4007712802,
+                1181384147
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t7.combined.png",
+                "out/attraction.float/attraction.float.t17.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t7",
+                "attraction.float.t17"
+              ],
+              "seeds": [
+                2543820926,
+                3548962238
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.repulsion_ambiguous/attraction.repulsion_ambiguous.t10.combined.png",
+                "out/attraction.repulsion_ambiguous/attraction.repulsion_ambiguous.t1.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.repulsion_ambiguous",
+              "ids": [
+                "attraction.repulsion_ambiguous.t10",
+                "attraction.repulsion_ambiguous.t1"
+              ],
+              "seeds": [
+                1324872209,
+                4279925702
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.repulsion_ambiguous/attraction.repulsion_ambiguous.t2.combined.png",
+                "out/attraction.repulsion_ambiguous/attraction.repulsion_ambiguous.t13.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.repulsion_ambiguous",
+              "ids": [
+                "attraction.repulsion_ambiguous.t2",
+                "attraction.repulsion_ambiguous.t13"
+              ],
+              "seeds": [
+                2274798042,
+                916441132
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.size/attraction.size.t18.combined.png",
+                "out/attraction.size/attraction.size.t4.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.size",
+              "ids": [
+                "attraction.size.t18",
+                "attraction.size.t4"
+              ],
+              "seeds": [
+                3798708457,
+                813868880
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.size/attraction.size.t5.combined.png",
+                "out/attraction.size/attraction.size.t16.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.size",
+              "ids": [
+                "attraction.size.t5",
+                "attraction.size.t16"
+              ],
+              "seeds": [
+                68340605,
+                870433001
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.gravity_dots/attraction.gravity_dots.t8.combined.png",
+                "out/attraction.gravity_dots/attraction.gravity_dots.t11.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.gravity_dots",
+              "ids": [
+                "attraction.gravity_dots.t8",
+                "attraction.gravity_dots.t11"
+              ],
+              "seeds": [
+                2390999397,
+                2290615800
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.gravity_dots/attraction.gravity_dots.t13.combined.png",
+                "out/attraction.gravity_dots/attraction.gravity_dots.t7.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.gravity_dots",
+              "ids": [
+                "attraction.gravity_dots.t13",
+                "attraction.gravity_dots.t7"
+              ],
+              "seeds": [
+                2822097885,
+                2342402488
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t9.combined.png",
+                "out/attraction.float/attraction.float.t2.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t9",
+                "attraction.float.t2"
+              ],
+              "seeds": [
+                1740710364,
+                1488296010
+              ],
+              "correct": "different"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t14.combined.png",
+                "out/attraction.float/attraction.float.t16.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t14",
+                "attraction.float.t16"
+              ],
+              "seeds": [
+                1537438461,
+                446374748
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/attraction.gravity_dots/attraction.gravity_dots.t10.combined.png",
+                "out/attraction.gravity_dots/attraction.gravity_dots.t4.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.gravity_dots",
+              "ids": [
+                "attraction.gravity_dots.t10",
+                "attraction.gravity_dots.t4"
+              ],
+              "seeds": [
+                1776849086,
+                870355872
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t3.combined.png",
+                "out/attraction.float/attraction.float.t12.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t3",
+                "attraction.float.t12"
+              ],
+              "seeds": [
+                2554955150,
+                177140488
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t8.combined.png",
+                "out/attraction.float/attraction.float.t4.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t8",
+                "attraction.float.t4"
+              ],
+              "seeds": [
+                2459329612,
+                26947308
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t1.combined.png",
+                "out/attraction.color/attraction.color.t17.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t1",
+                "attraction.color.t17"
+              ],
+              "seeds": [
+                2121297670,
+                1398771971
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t18.combined.png",
+                "out/attraction.float/attraction.float.t11.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t18",
+                "attraction.float.t11"
+              ],
+              "seeds": [
+                3314738536,
+                745112701
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t13.combined.png",
+                "out/attraction.float/attraction.float.t1.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t13",
+                "attraction.float.t1"
+              ],
+              "seeds": [
+                4133375516,
+                1038742850
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.gravity_dots/attraction.gravity_dots.t5.combined.png",
+                "out/attraction.gravity_dots/attraction.gravity_dots.t6.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.gravity_dots",
+              "ids": [
+                "attraction.gravity_dots.t5",
+                "attraction.gravity_dots.t6"
+              ],
+              "seeds": [
+                877164893,
+                3767510229
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t10.combined.png",
+                "out/attraction.float/attraction.float.t5.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t10",
+                "attraction.float.t5"
+              ],
+              "seeds": [
+                1601325832,
+                3885169900
+              ],
+              "correct": "same"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": 3,
+      "family": "color",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t6.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t12.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t6",
+                "color.inversion_recolor.t12"
+              ],
+              "seeds": [
+                964460898,
+                1197681147
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t1.combined.png",
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t28.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.cross_plus_recolor",
+              "ids": [
+                "color.cross_plus_recolor.t1",
+                "color.cross_plus_recolor.t28"
+              ],
+              "seeds": [
+                3587862751,
+                1665858377
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t20.combined.png",
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t25.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.cross_plus_recolor",
+              "ids": [
+                "color.cross_plus_recolor.t20",
+                "color.cross_plus_recolor.t25"
+              ],
+              "seeds": [
+                1241618934,
+                1990808437
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t18.combined.png",
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t22.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.cross_plus_recolor",
+              "ids": [
+                "color.cross_plus_recolor.t18",
+                "color.cross_plus_recolor.t22"
+              ],
+              "seeds": [
+                4291753046,
+                4240974330
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t5.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t9.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t5",
+                "color.odd_recolor.t9"
+              ],
+              "seeds": [
+                3768069407,
+                3615278677
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t18.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t4.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t18",
+                "color.odd_recolor.t4"
+              ],
+              "seeds": [
+                1639023415,
+                2522191419
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t13.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t12.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t13",
+                "color.odd_recolor.t12"
+              ],
+              "seeds": [
+                2342440976,
+                2221225146
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t15.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t6.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t15",
+                "color.odd_recolor.t6"
+              ],
+              "seeds": [
+                2309543585,
+                2585102238
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t21.combined.png",
+                "out/color.cross_plus_recolor/color.cross_plus_recolor.t19.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.cross_plus_recolor",
+              "ids": [
+                "color.cross_plus_recolor.t21",
+                "color.cross_plus_recolor.t19"
+              ],
+              "seeds": [
+                571681806,
+                3897325523
+              ],
+              "correct": "different"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t16.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t13.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t16",
+                "color.inversion_recolor.t13"
+              ],
+              "seeds": [
+                2239720428,
+                2831314968
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t10.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t14.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t10",
+                "color.inversion_recolor.t14"
+              ],
+              "seeds": [
+                1527210673,
+                443228939
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t5.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t3.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t5",
+                "color.inversion_recolor.t3"
+              ],
+              "seeds": [
+                2681701256,
+                2180362620
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t1.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t16.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t1",
+                "color.odd_recolor.t16"
+              ],
+              "seeds": [
+                689313972,
+                1526861190
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t8.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t10.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t8",
+                "color.odd_recolor.t10"
+              ],
+              "seeds": [
+                4111492933,
+                1176986666
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t17.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t14.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t17",
+                "color.odd_recolor.t14"
+              ],
+              "seeds": [
+                3870429699,
+                3929410962
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t2.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t7.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t2",
+                "color.inversion_recolor.t7"
+              ],
+              "seeds": [
+                3133115616,
+                2527988443
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t1.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t15.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t1",
+                "color.inversion_recolor.t15"
+              ],
+              "seeds": [
+                858111406,
+                4177034403
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.inversion_recolor/color.inversion_recolor.t11.combined.png",
+                "out/color.inversion_recolor/color.inversion_recolor.t8.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.inversion_recolor",
+              "ids": [
+                "color.inversion_recolor.t11",
+                "color.inversion_recolor.t8"
+              ],
+              "seeds": [
+                4221970305,
+                2454402930
+              ],
+              "correct": "same"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": 4,
+      "family": "mirror_rotate",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t4.combined.png",
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t5.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_y",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_y.t4",
+                "mirror_rotate.occlusion_mirror_y.t5"
+              ],
+              "seeds": [
+                1762363388,
+                3663762949
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t15.combined.png",
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t9.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_y",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_y.t15",
+                "mirror_rotate.occlusion_mirror_y.t9"
+              ],
+              "seeds": [
+                2825523395,
+                4239901402
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t18.combined.png",
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t10.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_y",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_y.t18",
+                "mirror_rotate.occlusion_mirror_y.t10"
+              ],
+              "seeds": [
+                1287333882,
+                1226951280
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t16.combined.png",
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t14.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_y",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_y.t16",
+                "mirror_rotate.occlusion_mirror_y.t14"
+              ],
+              "seeds": [
+                4163795237,
+                533285471
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t2.combined.png",
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t8.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_y",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_y.t2",
+                "mirror_rotate.occlusion_mirror_y.t8"
+              ],
+              "seeds": [
+                3785973810,
+                684238540
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t12.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t9.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t12",
+                "mirror_rotate.occlusion_rotate_180.t9"
+              ],
+              "seeds": [
+                553411524,
+                4276255741
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t13.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t18.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t13",
+                "mirror_rotate.occlusion_rotate_180.t18"
+              ],
+              "seeds": [
+                3144033064,
+                389715822
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t10.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t15.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t10",
+                "mirror_rotate.occlusion_rotate_180.t15"
+              ],
+              "seeds": [
+                1315486415,
+                2155774953
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t7.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t11.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t7",
+                "mirror_rotate.occlusion_rotate_180.t11"
+              ],
+              "seeds": [
+                1561539831,
+                2465957900
+              ],
+              "correct": "same"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t15.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t13.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t15",
+                "mirror_rotate.occlusion_rotate_90.t13"
+              ],
+              "seeds": [
+                2053728442,
+                996020760
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t6.combined.png",
+                "out/mirror_rotate.occlusion_mirror_y/mirror_rotate.occlusion_mirror_y.t13.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_y",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_y.t6",
+                "mirror_rotate.occlusion_mirror_y.t13"
+              ],
+              "seeds": [
+                723028097,
+                1381544519
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t12.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t10.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t12",
+                "mirror_rotate.occlusion_rotate_90.t10"
+              ],
+              "seeds": [
+                2164939335,
+                2317988050
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t18.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t5.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t18",
+                "mirror_rotate.occlusion_rotate_90.t5"
+              ],
+              "seeds": [
+                1264999245,
+                3218533249
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_x/mirror_rotate.occlusion_mirror_x.t11.combined.png",
+                "out/mirror_rotate.occlusion_mirror_x/mirror_rotate.occlusion_mirror_x.t18.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_x",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_x.t11",
+                "mirror_rotate.occlusion_mirror_x.t18"
+              ],
+              "seeds": [
+                1543729192,
+                4119128635
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t1.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t4.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t1",
+                "mirror_rotate.occlusion_rotate_90.t4"
+              ],
+              "seeds": [
+                793283169,
+                3938069525
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_x/mirror_rotate.occlusion_mirror_x.t6.combined.png",
+                "out/mirror_rotate.occlusion_mirror_x/mirror_rotate.occlusion_mirror_x.t8.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_x",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_x.t6",
+                "mirror_rotate.occlusion_mirror_x.t8"
+              ],
+              "seeds": [
+                3028527964,
+                3217295835
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t1.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t6.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t1",
+                "mirror_rotate.occlusion_rotate_180.t6"
+              ],
+              "seeds": [
+                890627871,
+                516662659
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t6.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t11.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t6",
+                "mirror_rotate.occlusion_rotate_90.t11"
+              ],
+              "seeds": [
+                1487757218,
+                1864289145
+              ],
+              "correct": "same"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": 5,
+      "family": "arithmetic",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t12.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t11.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t12",
+                "arithmetic.minority_recolor.t11"
+              ],
+              "seeds": [
+                522410220,
+                3496930449
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t1.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t13.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t1",
+                "arithmetic.minority_recolor.t13"
+              ],
+              "seeds": [
+                2888385356,
+                2338834436
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t14.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t15.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t14",
+                "arithmetic.majority_recolor.t15"
+              ],
+              "seeds": [
+                3263078649,
+                1671397968
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t11.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t6.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t11",
+                "arithmetic.majority_recolor.t6"
+              ],
+              "seeds": [
+                513313126,
+                985522000
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t2.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t8.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t2",
+                "arithmetic.majority_recolor.t8"
+              ],
+              "seeds": [
+                841241358,
+                952277446
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t18.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t1.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t18",
+                "arithmetic.majority_recolor.t1"
+              ],
+              "seeds": [
+                3397180423,
+                2406051453
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t12.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t13.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t12",
+                "arithmetic.majority_recolor.t13"
+              ],
+              "seeds": [
+                3908997311,
+                3051387923
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t8.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t2.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t8",
+                "arithmetic.minority_recolor.t2"
+              ],
+              "seeds": [
+                2400508308,
+                2813997211
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t4.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t17.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t4",
+                "arithmetic.majority_recolor.t17"
+              ],
+              "seeds": [
+                2176724444,
+                420397597
+              ],
+              "correct": "different"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t5.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t10.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t5",
+                "arithmetic.majority_recolor.t10"
+              ],
+              "seeds": [
+                1377565105,
+                3983650956
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t3.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t7.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t3",
+                "arithmetic.majority_recolor.t7"
+              ],
+              "seeds": [
+                3224000221,
+                1676228003
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t10.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t17.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t10",
+                "arithmetic.minority_recolor.t17"
+              ],
+              "seeds": [
+                3602589966,
+                376137638
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t9.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t16.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t9",
+                "arithmetic.majority_recolor.t16"
+              ],
+              "seeds": [
+                3624002911,
+                1483979336
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t4.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t16.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t4",
+                "arithmetic.minority_recolor.t16"
+              ],
+              "seeds": [
+                1728005027,
+                3500056105
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t15.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t5.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t15",
+                "arithmetic.minority_recolor.t5"
+              ],
+              "seeds": [
+                3728859729,
+                4289829899
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t6.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t14.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t6",
+                "arithmetic.minority_recolor.t14"
+              ],
+              "seeds": [
+                3105236751,
+                1828234046
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t3.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t9.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t3",
+                "arithmetic.minority_recolor.t9"
+              ],
+              "seeds": [
+                1181945874,
+                2103430837
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t18.combined.png",
+                "out/arithmetic.minority_recolor/arithmetic.minority_recolor.t7.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.minority_recolor",
+              "ids": [
+                "arithmetic.minority_recolor.t18",
+                "arithmetic.minority_recolor.t7"
+              ],
+              "seeds": [
+                3472126576,
+                2729321977
+              ],
+              "correct": "different"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": 6,
+      "family": "mix",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_mirror_x/mirror_rotate.occlusion_mirror_x.t5.combined.png",
+                "out/mirror_rotate.occlusion_mirror_x/mirror_rotate.occlusion_mirror_x.t8.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_mirror_x",
+              "ids": [
+                "mirror_rotate.occlusion_mirror_x.t5",
+                "mirror_rotate.occlusion_mirror_x.t8"
+              ],
+              "seeds": [
+                2144359566,
+                3217295835
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t7.combined.png",
+                "out/attraction.color/attraction.color.t3.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t7",
+                "attraction.color.t3"
+              ],
+              "seeds": [
+                399939495,
+                3778034467
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t1.combined.png",
+                "out/attraction.color/attraction.color.t18.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t1",
+                "attraction.color.t18"
+              ],
+              "seeds": [
+                2121297670,
+                3833027045
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t2.combined.png",
+                "out/attraction.color/attraction.color.t8.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t2",
+                "attraction.color.t8"
+              ],
+              "seeds": [
+                3113230319,
+                1977336003
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t14.combined.png",
+                "out/attraction.color/attraction.color.t15.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t14",
+                "attraction.color.t15"
+              ],
+              "seeds": [
+                916285014,
+                1832290846
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t17.combined.png",
+                "out/attraction.color/attraction.color.t16.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t17",
+                "attraction.color.t16"
+              ],
+              "seeds": [
+                1398771971,
+                3971703141
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t10.combined.png",
+                "out/attraction.color/attraction.color.t5.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t10",
+                "attraction.color.t5"
+              ],
+              "seeds": [
+                1110113696,
+                2052576676
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t9.combined.png",
+                "out/attraction.color/attraction.color.t11.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t9",
+                "attraction.color.t11"
+              ],
+              "seeds": [
+                3714483398,
+                1181384147
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t13.combined.png",
+                "out/attraction.color/attraction.color.t12.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t13",
+                "attraction.color.t12"
+              ],
+              "seeds": [
+                3388153301,
+                1358768348
+              ],
+              "correct": "same"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t7.combined.png",
+                "out/attraction.float/attraction.float.t4.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t7",
+                "attraction.float.t4"
+              ],
+              "seeds": [
+                2543820926,
+                26947308
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t18.combined.png",
+                "out/attraction.float/attraction.float.t11.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t18",
+                "attraction.float.t11"
+              ],
+              "seeds": [
+                3314738536,
+                745112701
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t5.combined.png",
+                "out/attraction.float/attraction.float.t10.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t5",
+                "attraction.float.t10"
+              ],
+              "seeds": [
+                3885169900,
+                1601325832
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_step/expansion.star_step.t1.combined.png",
+                "out/expansion.star_step/expansion.star_step.t17.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_step",
+              "ids": [
+                "expansion.star_step.t1",
+                "expansion.star_step.t17"
+              ],
+              "seeds": [
+                2399612077,
+                1447019650
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t14.combined.png",
+                "out/attraction.float/attraction.float.t13.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t14",
+                "attraction.float.t13"
+              ],
+              "seeds": [
+                1537438461,
+                4133375516
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t1.combined.png",
+                "out/attraction.float/attraction.float.t9.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t1",
+                "attraction.float.t9"
+              ],
+              "seeds": [
+                1038742850,
+                1740710364
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/attraction.float/attraction.float.t12.combined.png",
+                "out/attraction.float/attraction.float.t6.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.float",
+              "ids": [
+                "attraction.float.t12",
+                "attraction.float.t6"
+              ],
+              "seeds": [
+                177140488,
+                718981869
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/occlusion_reversal/occlusion_reversal.t9.combined.png",
+                "out/occlusion_reversal/occlusion_reversal.t5.combined.png"
+              ],
+              "family": "occlusion_reversal",
+              "sub_rule": "occlusion_reversal",
+              "ids": [
+                "occlusion_reversal.t9",
+                "occlusion_reversal.t5"
+              ],
+              "seeds": [
+                2620327122,
+                1844151013
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_full/expansion.plus_full.t16.combined.png",
+                "out/expansion.plus_full/expansion.plus_full.t5.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_full",
+              "ids": [
+                "expansion.plus_full.t16",
+                "expansion.plus_full.t5"
+              ],
+              "seeds": [
+                2852239957,
+                4129571806
+              ],
+              "correct": "different"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": 7,
+      "family": "mix",
+      "phases": [
+        {
+          "phase": "phase_start",
+          "bg": "green",
+          "hint": "First rule",
+          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "trial": [
+            {
+              "imgs": [
+                "out/attraction.gravity/attraction.gravity.t1.combined.png",
+                "out/attraction.gravity/attraction.gravity.t12.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.gravity",
+              "ids": [
+                "attraction.gravity.t1",
+                "attraction.gravity.t12"
+              ],
+              "seeds": [
+                2015623692,
+                2247827445
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "inference",
+          "bg": "green",
+          "hint": "previous rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/occlusion_reversal/occlusion_reversal.t7.combined.png",
+                "out/occlusion_reversal/occlusion_reversal.t13.combined.png"
+              ],
+              "family": "occlusion_reversal",
+              "sub_rule": "occlusion_reversal",
+              "ids": [
+                "occlusion_reversal.t7",
+                "occlusion_reversal.t13"
+              ],
+              "seeds": [
+                3248751585,
+                1647629630
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/occlusion_reversal/occlusion_reversal.t15.combined.png",
+                "out/occlusion_reversal/occlusion_reversal.t6.combined.png"
+              ],
+              "family": "occlusion_reversal",
+              "sub_rule": "occlusion_reversal",
+              "ids": [
+                "occlusion_reversal.t15",
+                "occlusion_reversal.t6"
+              ],
+              "seeds": [
+                232206660,
+                1292432663
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/occlusion_reversal/occlusion_reversal.t4.combined.png",
+                "out/occlusion_reversal/occlusion_reversal.t16.combined.png"
+              ],
+              "family": "occlusion_reversal",
+              "sub_rule": "occlusion_reversal",
+              "ids": [
+                "occlusion_reversal.t4",
+                "occlusion_reversal.t16"
+              ],
+              "seeds": [
+                2637693719,
+                4035073641
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_step/expansion.plus_step.t13.combined.png",
+                "out/expansion.plus_step/expansion.plus_step.t8.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_step",
+              "ids": [
+                "expansion.plus_step.t13",
+                "expansion.plus_step.t8"
+              ],
+              "seeds": [
+                4183086005,
+                3872195655
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t8.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t12.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t8",
+                "mirror_rotate.occlusion_rotate_90.t12"
+              ],
+              "seeds": [
+                4162232768,
+                2164939335
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_full/expansion.plus_full.t11.combined.png",
+                "out/expansion.plus_full/expansion.plus_full.t10.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_full",
+              "ids": [
+                "expansion.plus_full.t11",
+                "expansion.plus_full.t10"
+              ],
+              "seeds": [
+                4136888960,
+                633607626
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t16.combined.png",
+                "out/mirror_rotate.occlusion_rotate_90/mirror_rotate.occlusion_rotate_90.t18.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_90",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_90.t16",
+                "mirror_rotate.occlusion_rotate_90.t18"
+              ],
+              "seeds": [
+                4246499471,
+                1264999245
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.plus_step/expansion.plus_step.t2.combined.png",
+                "out/expansion.plus_step/expansion.plus_step.t11.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.plus_step",
+              "ids": [
+                "expansion.plus_step.t2",
+                "expansion.plus_step.t11"
+              ],
+              "seeds": [
+                3182691459,
+                3154866995
+              ],
+              "correct": "different"
+            }
+          ]
+        },
+        {
+          "phase": "phase_start",
+          "bg": "red",
+          "hint": "Memorize this rule",
+          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "trial": [
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t13.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t7.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t13",
+                "mirror_rotate.occlusion_rotate_180.t7"
+              ],
+              "seeds": [
+                3144033064,
+                1561539831
+              ]
+            }
+          ]
+        },
+        {
+          "phase": "application",
+          "bg": "red",
+          "hint": "memorized rule",
+          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "trials": [
+            {
+              "imgs": [
+                "out/attraction.color/attraction.color.t5.combined.png",
+                "out/attraction.color/attraction.color.t11.combined.png"
+              ],
+              "family": "attraction",
+              "sub_rule": "attraction.color",
+              "ids": [
+                "attraction.color.t5",
+                "attraction.color.t11"
+              ],
+              "seeds": [
+                2052576676,
+                1181384147
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/occlusion_reversal/occlusion_reversal.t14.combined.png",
+                "out/occlusion_reversal/occlusion_reversal.t12.combined.png"
+              ],
+              "family": "occlusion_reversal",
+              "sub_rule": "occlusion_reversal",
+              "ids": [
+                "occlusion_reversal.t14",
+                "occlusion_reversal.t12"
+              ],
+              "seeds": [
+                4226726759,
+                3987738454
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t14.combined.png",
+                "out/arithmetic.majority_recolor/arithmetic.majority_recolor.t11.combined.png"
+              ],
+              "family": "arithmetic",
+              "sub_rule": "arithmetic.majority_recolor",
+              "ids": [
+                "arithmetic.majority_recolor.t14",
+                "arithmetic.majority_recolor.t11"
+              ],
+              "seeds": [
+                3263078649,
+                513313126
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t6.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t2.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t6",
+                "mirror_rotate.occlusion_rotate_180.t2"
+              ],
+              "seeds": [
+                516662659,
+                3052337391
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t8.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t4.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t8",
+                "mirror_rotate.occlusion_rotate_180.t4"
+              ],
+              "seeds": [
+                1614312901,
+                2439141234
+              ],
+              "correct": "same"
+            },
+            {
+              "imgs": [
+                "out/color.odd_recolor/color.odd_recolor.t16.combined.png",
+                "out/color.odd_recolor/color.odd_recolor.t4.combined.png"
+              ],
+              "family": "color",
+              "sub_rule": "color.odd_recolor",
+              "ids": [
+                "color.odd_recolor.t16",
+                "color.odd_recolor.t4"
+              ],
+              "seeds": [
+                1526861190,
+                2522191419
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/expansion.star_full/expansion.star_full.t7.combined.png",
+                "out/expansion.star_full/expansion.star_full.t2.combined.png"
+              ],
+              "family": "expansion",
+              "sub_rule": "expansion.star_full",
+              "ids": [
+                "expansion.star_full.t7",
+                "expansion.star_full.t2"
+              ],
+              "seeds": [
+                1249398712,
+                101791035
+              ],
+              "correct": "different"
+            },
+            {
+              "imgs": [
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t18.combined.png",
+                "out/mirror_rotate.occlusion_rotate_180/mirror_rotate.occlusion_rotate_180.t3.combined.png"
+              ],
+              "family": "mirror_rotate",
+              "sub_rule": "mirror_rotate.occlusion_rotate_180",
+              "ids": [
+                "mirror_rotate.occlusion_rotate_180.t18",
+                "mirror_rotate.occlusion_rotate_180.t3"
+              ],
+              "seeds": [
+                389715822,
+                190325382
+              ],
+              "correct": "same"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
