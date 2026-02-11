@@ -46,8 +46,23 @@ def save_combined_grids(grid1, grid2, save_path="combined.png"):
         for r in range(rows2)
     ])
 
-    fig, axs = plt.subplots(1, 2, figsize=(cols1 + cols2, max(rows1, rows2)))
+    fig, axs = plt.subplots(
+        1, 2,
+        figsize=(cols1 + cols2 + 2, max(rows1, rows2)),  # extra horizontal room
+        gridspec_kw={'wspace': 0.25}  # space for arrow
+    )
     fig.patch.set_facecolor("gray")
+
+    fig.text(
+        0.51,  # horizontal center of figure
+        0.5,  # vertical center
+        "→",
+        ha="center",
+        va="center",
+        fontsize=140,
+        color="white",
+        fontweight="bold"
+    )
 
     # First grid
     axs[0].imshow(rgb_grid1, interpolation='none', extent=(0, cols1, rows1, 0))
