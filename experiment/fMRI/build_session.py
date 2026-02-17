@@ -190,9 +190,9 @@ def build_session(
         p_same_inference: float = 0.5,
         p_same_application: float = 0.5,
         inference_bg: str = "green",
-        inference_hint: str = "previous rule",
+        inference_hint: str = "Previous rule",
         application_bg: str = "red",
-        application_hint: str = "memorized rule",
+        application_hint: str = "Memorized rule",
 ):
     rng = random.Random(seed)
     out_base = Path(out_root).resolve()

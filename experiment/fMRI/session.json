@@ -36,7 +36,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -204,7 +204,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -378,7 +378,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -546,7 +546,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -720,7 +720,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -888,7 +888,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -1062,7 +1062,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -1230,7 +1230,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -1404,7 +1404,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -1572,7 +1572,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -1746,7 +1746,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -1914,7 +1914,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -2088,7 +2088,7 @@
         {
           "phase": "inference",
           "bg": "green",
-          "hint": "previous rule",
+          "hint": "Previous rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
@@ -2256,7 +2256,7 @@
         {
           "phase": "application",
           "bg": "red",
-          "hint": "memorized rule",
+          "hint": "Memorized rule",
           "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
           "trials": [
             {
