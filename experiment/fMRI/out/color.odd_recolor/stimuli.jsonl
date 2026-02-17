@@ -1,0 +1,15 @@
+{"id": "color.odd_recolor.t1", "rule": "color.odd_recolor", "family": "color", "seed": 280330494, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 9}, "difficulty": null}
+{"id": "color.odd_recolor.t2", "rule": "color.odd_recolor", "family": "color", "seed": 1843048291, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 5}, "difficulty": null}
+{"id": "color.odd_recolor.t3", "rule": "color.odd_recolor", "family": "color", "seed": 974087439, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 10}, "difficulty": null}
+{"id": "color.odd_recolor.t4", "rule": "color.odd_recolor", "family": "color", "seed": 975886551, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 9}, "difficulty": null}
+{"id": "color.odd_recolor.t5", "rule": "color.odd_recolor", "family": "color", "seed": 2041663403, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 12}, "difficulty": null}
+{"id": "color.odd_recolor.t6", "rule": "color.odd_recolor", "family": "color", "seed": 2574681136, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "color.odd_recolor.t7", "rule": "color.odd_recolor", "family": "color", "seed": 1938473251, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 6}, "difficulty": null}
+{"id": "color.odd_recolor.t8", "rule": "color.odd_recolor", "family": "color", "seed": 2890849996, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 10}, "difficulty": null}
+{"id": "color.odd_recolor.t9", "rule": "color.odd_recolor", "family": "color", "seed": 185838180, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 6}, "difficulty": null}
+{"id": "color.odd_recolor.t10", "rule": "color.odd_recolor", "family": "color", "seed": 2737736881, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "color.odd_recolor.t11", "rule": "color.odd_recolor", "family": "color", "seed": 4006067677, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 12}, "difficulty": null}
+{"id": "color.odd_recolor.t12", "rule": "color.odd_recolor", "family": "color", "seed": 599322233, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 9}, "difficulty": null}
+{"id": "color.odd_recolor.t13", "rule": "color.odd_recolor", "family": "color", "seed": 1238605073, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "color.odd_recolor.t14", "rule": "color.odd_recolor", "family": "color", "seed": 2484760151, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 6}, "difficulty": null}
+{"id": "color.odd_recolor.t15", "rule": "color.odd_recolor", "family": "color", "seed": 761416796, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}

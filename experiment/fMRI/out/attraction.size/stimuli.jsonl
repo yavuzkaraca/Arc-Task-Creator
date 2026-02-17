@@ -1,0 +1,15 @@
+{"id": "attraction.size.t1", "rule": "attraction.size", "family": "attraction", "seed": 892837224, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t2", "rule": "attraction.size", "family": "attraction", "seed": 1428323325, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t3", "rule": "attraction.size", "family": "attraction", "seed": 1057801543, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t4", "rule": "attraction.size", "family": "attraction", "seed": 1508516732, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t5", "rule": "attraction.size", "family": "attraction", "seed": 3400976387, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t6", "rule": "attraction.size", "family": "attraction", "seed": 2588642870, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t7", "rule": "attraction.size", "family": "attraction", "seed": 3617518645, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t8", "rule": "attraction.size", "family": "attraction", "seed": 1968315621, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t9", "rule": "attraction.size", "family": "attraction", "seed": 606702888, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t10", "rule": "attraction.size", "family": "attraction", "seed": 3083421431, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t11", "rule": "attraction.size", "family": "attraction", "seed": 2253740381, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t12", "rule": "attraction.size", "family": "attraction", "seed": 229025807, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t13", "rule": "attraction.size", "family": "attraction", "seed": 940278242, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t14", "rule": "attraction.size", "family": "attraction", "seed": 3663449703, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "attraction.size.t15", "rule": "attraction.size", "family": "attraction", "seed": 1365889384, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}

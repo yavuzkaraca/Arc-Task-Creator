@@ -1,0 +1,15 @@
+{"id": "expansion.star_step.t1", "rule": "expansion.star_step", "family": "expansion", "seed": 2098630529, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_step.t2", "rule": "expansion.star_step", "family": "expansion", "seed": 958713591, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_step.t3", "rule": "expansion.star_step", "family": "expansion", "seed": 3966022936, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}
+{"id": "expansion.star_step.t4", "rule": "expansion.star_step", "family": "expansion", "seed": 1118289637, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.star_step.t5", "rule": "expansion.star_step", "family": "expansion", "seed": 1868276153, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.star_step.t6", "rule": "expansion.star_step", "family": "expansion", "seed": 3651408020, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_step.t7", "rule": "expansion.star_step", "family": "expansion", "seed": 2243090531, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.star_step.t8", "rule": "expansion.star_step", "family": "expansion", "seed": 2197684708, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}
+{"id": "expansion.star_step.t9", "rule": "expansion.star_step", "family": "expansion", "seed": 2405146915, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_step.t10", "rule": "expansion.star_step", "family": "expansion", "seed": 340501467, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.star_step.t11", "rule": "expansion.star_step", "family": "expansion", "seed": 132484939, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}
+{"id": "expansion.star_step.t12", "rule": "expansion.star_step", "family": "expansion", "seed": 3790915106, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.star_step.t13", "rule": "expansion.star_step", "family": "expansion", "seed": 1620455502, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_step.t14", "rule": "expansion.star_step", "family": "expansion", "seed": 2085968245, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.star_step.t15", "rule": "expansion.star_step", "family": "expansion", "seed": 3815073067, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}

@@ -1,0 +1,15 @@
+{"id": "expansion.plus_step.t1", "rule": "expansion.plus_step", "family": "expansion", "seed": 1219945281, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.plus_step.t2", "rule": "expansion.plus_step", "family": "expansion", "seed": 3500455065, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}
+{"id": "expansion.plus_step.t3", "rule": "expansion.plus_step", "family": "expansion", "seed": 578800549, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}
+{"id": "expansion.plus_step.t4", "rule": "expansion.plus_step", "family": "expansion", "seed": 2172461224, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.plus_step.t5", "rule": "expansion.plus_step", "family": "expansion", "seed": 3141613891, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}
+{"id": "expansion.plus_step.t6", "rule": "expansion.plus_step", "family": "expansion", "seed": 2680746757, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}
+{"id": "expansion.plus_step.t7", "rule": "expansion.plus_step", "family": "expansion", "seed": 3035916872, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.plus_step.t8", "rule": "expansion.plus_step", "family": "expansion", "seed": 2731815482, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.plus_step.t9", "rule": "expansion.plus_step", "family": "expansion", "seed": 3347642475, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 4}, "difficulty": null}
+{"id": "expansion.plus_step.t10", "rule": "expansion.plus_step", "family": "expansion", "seed": 4236823615, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.plus_step.t11", "rule": "expansion.plus_step", "family": "expansion", "seed": 3956062504, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 3}, "difficulty": null}
+{"id": "expansion.plus_step.t12", "rule": "expansion.plus_step", "family": "expansion", "seed": 204472471, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 1}, "difficulty": null}
+{"id": "expansion.plus_step.t13", "rule": "expansion.plus_step", "family": "expansion", "seed": 3390304018, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.plus_step.t14", "rule": "expansion.plus_step", "family": "expansion", "seed": 3767440542, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
+{"id": "expansion.plus_step.t15", "rule": "expansion.plus_step", "family": "expansion", "seed": 2777875417, "params": {"grid_size": [12, 12], "colors": ["red", "blue"], "n_objects": 2}, "difficulty": null}
