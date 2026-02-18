@@ -253,10 +253,10 @@ end
 function draw_header(w, rect, phase)
     Screen('TextStyle', w, 1);
     Screen('TextSize', w, 38);
-    DrawFormattedText(w, char(string(phase.hint)), 'center', rect(4)*0.15, [1 1 1]);
+    DrawFormattedText(w, char(string(phase.hint)), 'center', rect(4)*0.12, [1 1 1]);
     Screen('TextStyle', w, 0);
     Screen('TextSize', w, 30);
-    DrawFormattedText(w, char(string(phase.tip)), 'center', rect(4)*0.22, [1 1 1]);
+    DrawFormattedText(w, char(string(phase.tip)), 'center', rect(4)*0.18, [1 1 1]);
 end
 
 function draw_two_stacked_imgs(w, rect, texCache, imgsField)
@@ -273,7 +273,7 @@ function draw_two_stacked_imgs(w, rect, texCache, imgsField)
     wImg = rect(3) * 0.80;
     hImg = rect(4) * 0.30;
 
-    topMargin = rect(4) * 0.28;
+    topMargin = rect(4) * 0.22;
     bottomMargin = rect(4) * 0.06;
 
     availTop = topMargin;

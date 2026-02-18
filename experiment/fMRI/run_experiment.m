@@ -16,7 +16,7 @@ try
 
     % ---- window ----
     AssertOpenGL;
-    winRect = [0 0 1600 1600];  % [left top right bottom]
+    winRect = [0 0 1400 1400];  % [left top right bottom]
     [w, rect] = PsychImaging('OpenWindow', 0, [0 0 0], winRect);
     Screen('ColorRange', w, 1);
     Screen('TextFont', w, 'Arial');
