@@ -1,4 +1,4 @@
-from tasks.occlusion import generate_occlusion_reversal
+from rules.occlusion import generate_occlusion_reversal
 
 
 def generate_occlusion_mirror_x(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):

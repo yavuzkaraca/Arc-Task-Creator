@@ -5,28 +5,28 @@ from src.visualize import save_grid, save_combined_grids
 from src.stimulus import Stimulus
 from util import append_jsonl, next_idx, new_seed
 
-from src.tasks.color import (
+from src.rules.color import (
     generate_cross_plus_recolor,
     generate_inversion_recolor,
     generate_odd_color_recolor,
 )
 
-from src.tasks.arithmetic import (
+from src.rules.arithmetic import (
     generate_majority_recolor,
     generate_minority_recolor,
 
 )
-from src.tasks.expansion import (
+from src.rules.expansion import (
     generate_star_expansion_single_step,
     generate_star_expansion_full,
     generate_plus_expansion_single_step,
     generate_plus_expansion_full,
     generate_3diagonal_expansion_full,
 )
-from src.tasks.occlusion import (
+from src.rules.occlusion import (
     generate_occlusion_reversal,
 )
-from src.tasks.attraction import (
+from src.rules.attraction import (
     generate_color_attraction,
     generate_size_attraction,
     generate_repulsion_gun,
@@ -35,7 +35,7 @@ from src.tasks.attraction import (
     generate_float, generate_dots_gravity,
 )
 
-from src.tasks.mirror_rotate import (
+from src.rules.mirror_rotate import (
     generate_occlusion_mirror_x,
     generate_occlusion_mirror_y,
     generate_occlusion_rotate_90,
