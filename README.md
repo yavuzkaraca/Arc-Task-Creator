@@ -1,17 +1,17 @@
-# ArcTaskCreator
+# Arc Rule Generator
 
-Python-based framework for generating **ARC-like visual tasks**. 
-These tasks are used as a dataset for research on **rule inference and rule application** processes in humans.
+Python-based framework for generating **ARC-like matrix transformation rules**. 
+These matrices are used as visual stimuli for research on **rule inference and rule application** processes in humans.
 
 ---
 
 ## Overview
 
-The project generates pairs of grids (an **input** and its corresponding **output**) based on specific transformation rules such as:
+The project generates pairs of grids (an **input** and its corresponding **output**) based on specific transformation rule families such as:
 
 - **Expansion** (e.g. star, plus, diagonal, single-step / infinite growth)
 - **Attraction/repulsion** (e.g. pull, push, fall, float)
-- **Occlusion** (e.g. reversal, rotation, mirror)
+- **Occlusion** (e.g. reversal)
 - **Color** (e.g. shape based recoloring)
 - **Mirror/rotate** (e.g. x mirror, y mirror, rotate 90, rotate 180)
 - **Arithmetic** (e.g. inversion, counting, majority/minority, parity)
