@@ -13,7 +13,7 @@
           "phase": "phase_start",
           "bg": "green",
           "hint": "First rule",
-          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "tip": "←   Ready          Ready   →",
           "trial": [
             {
               "imgs": [
@@ -37,7 +37,7 @@
           "phase": "inference",
           "bg": "green",
           "hint": "Previous rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -181,7 +181,7 @@
           "phase": "phase_start",
           "bg": "red",
           "hint": "Memorize this rule",
-          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "tip": "←   Memorized          Memorized   →",
           "trial": [
             {
               "imgs": [
@@ -205,7 +205,7 @@
           "phase": "application",
           "bg": "red",
           "hint": "Memorized rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -355,7 +355,7 @@
           "phase": "phase_start",
           "bg": "green",
           "hint": "First rule",
-          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "tip": "←   Ready          Ready   →",
           "trial": [
             {
               "imgs": [
@@ -379,7 +379,7 @@
           "phase": "inference",
           "bg": "green",
           "hint": "Previous rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -523,7 +523,7 @@
           "phase": "phase_start",
           "bg": "red",
           "hint": "Memorize this rule",
-          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "tip": "←   Memorized          Memorized   →",
           "trial": [
             {
               "imgs": [
@@ -547,7 +547,7 @@
           "phase": "application",
           "bg": "red",
           "hint": "Memorized rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -697,7 +697,7 @@
           "phase": "phase_start",
           "bg": "green",
           "hint": "First rule",
-          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "tip": "←   Ready          Ready   →",
           "trial": [
             {
               "imgs": [
@@ -721,7 +721,7 @@
           "phase": "inference",
           "bg": "green",
           "hint": "Previous rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -865,7 +865,7 @@
           "phase": "phase_start",
           "bg": "red",
           "hint": "Memorize this rule",
-          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "tip": "←   Memorized          Memorized   →",
           "trial": [
             {
               "imgs": [
@@ -889,7 +889,7 @@
           "phase": "application",
           "bg": "red",
           "hint": "Memorized rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -1039,7 +1039,7 @@
           "phase": "phase_start",
           "bg": "green",
           "hint": "First rule",
-          "tip": "LeftArrow = Got it    RightArrow = Got it",
+          "tip": "←   Ready          Ready   →",
           "trial": [
             {
               "imgs": [
@@ -1063,7 +1063,7 @@
           "phase": "inference",
           "bg": "green",
           "hint": "Previous rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
@@ -1207,7 +1207,7 @@
           "phase": "phase_start",
           "bg": "red",
           "hint": "Memorize this rule",
-          "tip": "LeftArrow = Memorized    RightArrow = Memorized",
+          "tip": "←   Memorized          Memorized   →",
           "trial": [
             {
               "imgs": [
@@ -1231,7 +1231,7 @@
           "phase": "application",
           "bg": "red",
           "hint": "Memorized rule",
-          "tip": "LeftArrow = SAME    RightArrow = DIFFERENT",
+          "tip": "←   Same          Different   →",
           "trials": [
             {
               "imgs": [
