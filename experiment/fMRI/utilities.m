@@ -1,103 +1,36 @@
 classdef utilities
 methods(Static)
 
-% ===================== normalization =====================
-function session = normalize_session(session)
-    session.blocks = utilities.force_struct_array(session.blocks);
-
-    for b = 1:numel(session.blocks)
-        session.blocks(b).phases = utilities.force_struct_array(session.blocks(b).phases);
-
-        for ph = 1:numel(session.blocks(b).phases)
-            P = session.blocks(b).phases(ph);
-
-            if isfield(P,'trials') && ~isempty(P.trials)
-                session.blocks(b).phases(ph).trials = utilities.force_struct_array(P.trials);
-            end
-
-            if isfield(P,'trial') && ~isempty(P.trial)
-                session.blocks(b).phases(ph).trial = utilities.force_struct_array(P.trial);
-            end
-        end
-    end
+% ===================== json safety =====================
+function v = geti(x, i)
+    if iscell(x), v = x{i}; else, v = x(i); end
 end
 
-function a = force_struct_array(x)
-    % Convert jsondecode outputs (cell-of-struct with heterogeneous fields)
-    % into a proper struct array by padding missing fields.
-
-    if isempty(x)
-        a = x;
-        return
-    end
-
-    if ~iscell(x)
-        a = x;  % already struct array (or something else)
-        return
-    end
-
-    % If it's a cell but not structs, try best-effort:
-    if ~all(cellfun(@isstruct, x))
-        try
-            a = [x{:}];
-        catch
-            a = x; % keep as cell if cannot concatenate
-        end
-        return
-    end
-
-    % Union of all fieldnames across elements
-    allFields = {};
-    for i = 1:numel(x)
-        allFields = union(allFields, fieldnames(x{i}), 'stable');
-    end
-
-    % Create padded struct array
-    a = repmat(cell2struct(repmat({[]}, 1, numel(allFields)), allFields, 2), 1, numel(x));
-
-    for i = 1:numel(x)
-        s = x{i};
-        fn = fieldnames(s);
-        for k = 1:numel(fn)
-            a(i).(fn{k}) = s.(fn{k});
-        end
-    end
+function s = asstruct(x)
+    if iscell(x), s = x{1}; else, s = x; end
 end
-
 
 function c = to_cellstr(x)
-    if isempty(x)
-        c = {};
-        return
-    end
-    if ischar(x) || isstring(x)
-        c = cellstr(x);
-    elseif iscell(x)
-        c = x;
-    else
-        % best effort: struct array / other types shouldn't be here
-        c = cellstr(string(x));
-    end
+    if ischar(x) || isstring(x), c = cellstr(x); else, c = x; end
 end
 
-% ===================== field getters =====================
 function out = get_field_str(s, field)
     out = "";
-    if isstruct(s) && isfield(s, field) && ~isempty(s.(field))
+    if isfield(s, field) && ~isempty(s.(field))
         out = string(s.(field));
     end
 end
 
 function out = get_field_strarr(s, field)
     out = strings(0,1);
-    if isstruct(s) && isfield(s, field) && ~isempty(s.(field))
+    if isfield(s, field) && ~isempty(s.(field))
         out = string(s.(field));
     end
 end
 
 function out = get_field_numarr(s, field)
     out = [];
-    if isstruct(s) && isfield(s, field) && ~isempty(s.(field))
+    if isfield(s, field) && ~isempty(s.(field))
         out = double(s.(field));
     end
 end
@@ -134,53 +67,16 @@ function trialTemplate = trial_template()
     );
 end
 
-function trial = make_trial(trialTemplate, block, phase, ph, t, tr, resp, rt, tOn, t0)
-    trial = trialTemplate;
-
-    trial.block_id     = block.block_id;
-    trial.block_family = string(block.family);
-    trial.trial_family = utilities.trial_family(block, tr);
-
-    trial.phase       = string(phase.phase);
-    trial.phase_index = ph;
-    trial.trial_index = t;
-
-    trial.bg   = string(phase.bg);
-    trial.hint = string(phase.hint);
-    trial.tip  = string(phase.tip);
-
-    trial.sub_rule = utilities.get_field_str(tr, 'sub_rule');
-    trial.ids      = utilities.get_field_strarr(tr, 'ids');
-    trial.seeds    = utilities.get_field_numarr(tr, 'seeds');
-    trial.imgs     = utilities.get_field_strarr(tr, 'imgs');
-
-    trial.correct    = utilities.get_field_str(tr, 'correct');
-    trial.resp       = resp;
-    trial.is_correct = utilities.score(resp, trial.correct);
-
-    trial.rt = rt;
-    trial.t  = tOn - t0;
-end
-
-function is_correct = score(resp, correct)
-    is_correct = [];
-    if correct == "same" || correct == "different"
-        is_correct = (resp == correct);
-    end
-end
-
 % ===================== preloading =====================
 function allImgs = collect_all_images(session)
     allImgs = {};
-
     for b = 1:numel(session.blocks)
-        block = session.blocks(b);
-
+        block = utilities.asstruct(session.blocks(b));
         for ph = 1:numel(block.phases)
-            phase = block.phases(ph);
+            phase = utilities.asstruct(utilities.geti(block.phases, ph));
 
             if isfield(phase,'trial') && ~isempty(phase.trial)
-                tr0 = phase.trial(1);
+                tr0 = utilities.asstruct(utilities.geti(phase.trial, 1));
                 if isfield(tr0,'imgs') && ~isempty(tr0.imgs)
                     allImgs = [allImgs, utilities.to_cellstr(tr0.imgs)]; %#ok<AGROW>
                 end
@@ -188,7 +84,7 @@ function allImgs = collect_all_images(session)
 
             if isfield(phase,'trials') && ~isempty(phase.trials)
                 for t = 1:numel(phase.trials)
-                    tr = phase.trials(t);
+                    tr = utilities.asstruct(utilities.geti(phase.trials, t));
                     if isfield(tr,'imgs') && ~isempty(tr.imgs)
                         allImgs = [allImgs, utilities.to_cellstr(tr.imgs)]; %#ok<AGROW>
                     end
@@ -196,7 +92,6 @@ function allImgs = collect_all_images(session)
             end
         end
     end
-
     allImgs = unique(allImgs, 'stable');
 end
 
@@ -213,7 +108,9 @@ function rgb = phase_bg_rgb(bgName)
 end
 
 function [key, t] = wait_key(validKeys, escKey)
-    KbReleaseWait; % debounce BEFORE
+    % --- debounce BEFORE ---
+    % If a key is still held from the previous screen, wait until release
+    KbReleaseWait;
 
     while true
         [down, secs, kc] = KbCheck;
@@ -228,33 +125,47 @@ function [key, t] = wait_key(validKeys, escKey)
         if any(kc(validKeys))
             key = find(kc, 1, 'first');
             t = secs;
-            KbReleaseWait; % debounce AFTER
+
+            % --- debounce AFTER ---
+            % Prevent same physical press leaking into next screen
+            KbReleaseWait;
             return
         end
     end
 end
 
 % ===================== screens =====================
-function [resp, rt, tOn] = twoimg_screen(w, rect, phase, tr, texCache, keySame, keyDiff, keyEsc)
-    Screen('FillRect', w, utilities.phase_bg_rgb(phase.bg));
+function [resp, rt, tOn] = phase_start_screen( ...
+    w, rect, phase, tr, texCache, KEY_SAME_NAME, KEY_DIFF_NAME, keySame, keyDiff, keyEsc)
+
+    Screen('FillRect', w, utilities.phase_bg_rgb(string(phase.bg)));
     utilities.draw_header(w, rect, phase);
+
     utilities.draw_two_stacked_imgs(w, rect, texCache, tr.imgs);
 
     tOn = Screen('Flip', w);
-
     [respKey, respTime] = utilities.wait_key([keySame keyDiff], keyEsc);
     rt = respTime - tOn;
+    resp = "same"; if respKey == keyDiff, resp = "different"; end
+end
 
-    resp = "same";
-    if respKey == keyDiff
-        resp = "different";
-    end
+function [resp, rt, stimOn] = decision_screen_twoimgs( ...
+    w, rect, phase, tr, texCache, keySame, keyDiff, keyEsc)
+
+    Screen('FillRect', w, utilities.phase_bg_rgb(string(phase.bg)));
+    utilities.draw_header(w, rect, phase);
+
+    utilities.draw_two_stacked_imgs(w, rect, texCache, tr.imgs);
+
+    stimOn = Screen('Flip', w);
+    [respKey, respTime] = utilities.wait_key([keySame keyDiff], keyEsc);
+    rt = respTime - stimOn;
+    resp = "same"; if respKey == keyDiff, resp = "different"; end
 end
 
 function draw_header(w, rect, phase)
     Screen('TextSize', w, 34);
     DrawFormattedText(w, char(string(phase.hint)), 'center', rect(4)*0.15, [1 1 1]);
-
     Screen('TextSize', w, 22);
     DrawFormattedText(w, char(string(phase.tip)), 'center', rect(4)*0.25, [1 1 1]);
 end
