@@ -213,14 +213,14 @@ def build_session(
         ps_inf = phase_start(
             fam, sr0, pools, rng, used, base_dir,
             inference_bg, "First rule",
-            f"{keys_same} = Got it    {keys_diff} = Got it"
+            "←   Ready          Ready   →"
         )
 
         inf, ctx = decision_phase(
             "inference", pools, rng, used, base_dir,
             n_decisions_per_phase, p_same_inference,
             inference_bg, inference_hint,
-            f"{keys_same} = SAME    {keys_diff} = DIFFERENT",
+            "←   Same          Different   →",
             context=(fam, sr0),
             swap_context=True,
             restrict_family=fam,  # <-- IMPORTANT
@@ -231,14 +231,14 @@ def build_session(
         ps_app = phase_start(
             fam, srM, pools, rng, used, base_dir,
             application_bg, "Memorize this rule",
-            f"{keys_same} = Memorized    {keys_diff} = Memorized"
+            "←   Memorized          Memorized   →"
         )
 
         app, _ = decision_phase(
             "application", pools, rng, used, base_dir,
             n_decisions_per_phase, p_same_application,
             application_bg, application_hint,
-            f"{keys_same} = SAME    {keys_diff} = DIFFERENT",
+            "←   Same          Different   →",
             context=(fam, srM),
             swap_context=False,
             restrict_family=fam,  # <-- IMPORTANT
