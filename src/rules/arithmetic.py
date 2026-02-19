@@ -1,5 +1,5 @@
 import random
-from util import rand_between
+from src.util import rand_between
 from src.grid import Grid
 
 

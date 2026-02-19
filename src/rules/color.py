@@ -1,7 +1,7 @@
 import random
 from typing import Dict, Tuple, Any, List
 from src.grid import Grid
-from util import rand_between
+from src.util import rand_between
 
 
 def generate_inversion_recolor(grid_size=(12, 12), block_num=(1, 6), colors=("red", "blue")):

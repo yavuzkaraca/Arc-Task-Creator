@@ -1,7 +1,7 @@
 import random
 
 from src.grid import Grid
-from util import rand_between
+from src.util import rand_between
 
 
 def generate_star_expansion_single_step(grid_size=(12, 12), star_num=(1, 4), colors=("red", "blue")):

@@ -324,7 +324,7 @@ def build_session(
         out_root: str = "out",
         participant: str = "p001",
         session_path: str = "session.json",
-        seed: int = 1,  # Change seed to get different session
+        seed: int = 2,  # Change seed to get different session TODO: convert participant id for the seed
         key_same: str = "LeftArrow",
         key_diff: str = "RightArrow",
         n_family_blocks: int = 6,

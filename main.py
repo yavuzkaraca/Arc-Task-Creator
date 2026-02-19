@@ -3,7 +3,7 @@ from pathlib import Path
 
 from src.visualize import save_grid, save_combined_grids
 from src.stimulus import Stimulus
-from util import append_jsonl, next_idx, new_seed
+from src.util import append_jsonl, next_idx, new_seed
 
 from src.rules.color import (
     generate_cross_plus_recolor,

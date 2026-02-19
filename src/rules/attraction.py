@@ -1,7 +1,7 @@
 import random
 
 from src.grid import Grid
-from util import rand_between
+from src.util import rand_between
 
 
 def generate_color_attraction(grid_size=(12, 12), size_range=(2, 5), colors=("red", "blue")):
